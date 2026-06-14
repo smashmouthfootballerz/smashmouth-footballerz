@@ -1,0 +1,7 @@
+body{margin:0;font-family:Arial;background:#0d0d12;color:white}
+.hero{padding:120px 20px;text-align:center;background:#111}
+h1{color:#ff6a1a}
+.btn{background:#ff6a1a;color:white;padding:12px 24px;text-decoration:none;border-radius:6px}
+section{padding:40px}
+.card{background:#1b1b24;padding:20px;margin:10px;border-radius:10px}
+.hosts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
