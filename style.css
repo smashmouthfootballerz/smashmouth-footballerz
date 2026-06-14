@@ -72,12 +72,12 @@ nav a:hover{
 
 .hero {
     background-image: url('Smash Mouth.jpg');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-
-    background-position: center 15%;
+    background-position: center top;
 
     min-height: 100vh;
+    background-color: #000;
 }
 
 .hero-overlay{
