@@ -166,3 +166,26 @@ box-shadow:0 0 25px #ff6a1a;
 width:100%;
 border-radius:15px;
 }
+.host-images{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-top:50px;
+}
+
+.host-images img{
+    width:400px;
+    max-width:100%;
+    border-radius:20px;
+    transition:0.3s;
+}
+
+.host-images img:hover{
+    transform:scale(1.05);
+}
+.hero-logo{
+    max-width:700px;
+    width:90%;
+    height:auto;
+}
