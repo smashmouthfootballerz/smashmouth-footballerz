@@ -3,7 +3,23 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 }
+.logo-brand{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
 
+.crest-logo{
+    height:60px;
+    width:auto;
+}
+
+.brand-text{
+    font-family:'Permanent Marker', cursive;
+    font-size:2rem;
+    color:white;
+    text-transform:uppercase;
+}
 body{
 font-family:Arial,sans-serif;
 background:#0a0a0a;
