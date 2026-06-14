@@ -34,18 +34,31 @@ text-decoration:none;
 }
 
 .hero{
-min-height:90vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:linear-gradient(
-rgba(0,0,0,.8),
-rgba(0,0,0,.8)
-);
+    position:relative;
+    height:100vh;
+
+    background-image:url('Smash Mouth(1).jpg');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
 }
 
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.65);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
 .hero h1{
 font-size:4rem;
 color:#ff6a1a;
