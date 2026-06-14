@@ -209,3 +209,15 @@ footer p{
     color:#ff6a1a;
     margin-bottom:15px;
 }
+.video-grid{
+    display:flex;
+    justify-content:center;
+}
+
+.video-grid iframe{
+    width:100%;
+    max-width:1000px;
+    height:560px;
+    border:none;
+    border-radius:20px;
+}
