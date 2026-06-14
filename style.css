@@ -5,64 +5,52 @@
 }
 
 body{
-    font-family:Arial, sans-serif;
-    background:#000;
-    color:#fff;
+    font-family:Arial,sans-serif;
+    background:#0a0a0a;
+    color:white;
 }
 
-/* =========================
-   NAVIGATION
-========================= */
-
 nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
+
     padding:20px 50px;
-    background:#111;
-    position:sticky;
-    top:0;
-    z-index:1000;
+    background:#000;
 }
 
 .logo-brand{
     display:flex;
     align-items:center;
-    gap:12px;
+    gap:15px;
 }
 
 .crest-logo{
-    width:45px;
-    height:45px;
-    object-fit:contain;
+    width:60px;
 }
 
 .brand-text{
-    font-family:'Permanent Marker', cursive;
-    color:#fff;
-    font-size:1.3rem;
+    font-family:'Permanent Marker',cursive;
+    color:white;
+    font-size:1.8rem;
 }
 
 nav ul{
     display:flex;
     list-style:none;
-    gap:25px;
+    gap:30px;
 }
 
-nav ul li a{
+nav a{
     color:white;
     text-decoration:none;
     font-weight:bold;
-    transition:.3s;
 }
-
-nav ul li a:hover{
-    color:#ff6a1a;
-}
-
-/* =========================
-   HERO
-========================= */
 
 .hero{
     position:relative;
@@ -70,9 +58,9 @@ nav ul li a:hover{
 
     background-image:url('Smash Mouth.jpg');
     background-size:cover;
-    background-position:center bottom;
-    background-repeat:no-repeat;
-}
+
+    /* Shows more of the bottom text */
+    background-position:center 85%;
 
     display:flex;
     justify-content:center;
@@ -80,74 +68,64 @@ nav ul li a:hover{
     text-align:center;
 }
 
-.hero::before{
-    content:"";
+.overlay{
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,.75);
+    background:rgba(0,0,0,.65);
 }
 
 .hero-content{
-    transform:translateY(100px);
-}
+    position:relative;
+    z-index:2;
 
-.hero{
-    background-position:center 90%;
+    max-width:1000px;
+
+    /* Move everything below Chad's face */
+    transform:translateY(100px);
 }
 
 .hero-logo{
     width:300px;
     max-width:80%;
     height:auto;
+
     margin-bottom:25px;
 }
 
 .hero h1{
     font-size:4rem;
-    color:white;
     margin-bottom:20px;
 }
 
 .hero p{
-    font-size:1.3rem;
-    color:white;
+    font-size:1.5rem;
     margin-bottom:30px;
 }
 
 .btn{
     display:inline-block;
-    padding:15px 35px;
+
+    padding:18px 40px;
+
     background:#ff6a1a;
     color:white;
+
     text-decoration:none;
     font-weight:bold;
-    border-radius:8px;
-    transition:.3s;
-}
 
-.btn:hover{
-    background:#ff8533;
+    border-radius:10px;
 }
-
-/* =========================
-   GENERAL SECTIONS
-========================= */
 
 section{
-    padding:80px 10%;
-    background:#000;
+    padding:100px 10%;
 }
 
 h2{
     text-align:center;
+    font-size:3rem;
     color:#ff6a1a;
-    font-size:2.5rem;
-    margin-bottom:40px;
+    margin-bottom:50px;
 }
-
-/* =========================
-   HOSTS
-========================= */
 
 .host-grid{
     display:grid;
@@ -156,35 +134,21 @@ h2{
 }
 
 .host-card{
-    background:#111;
+    background:#151515;
+    padding:20px;
     border-radius:20px;
-    overflow:hidden;
     text-align:center;
-    transition:.3s;
-}
-
-.host-card:hover{
-    transform:translateY(-10px);
 }
 
 .host-card img{
     width:100%;
-    display:block;
+    border-radius:15px;
 }
 
 .host-card h3{
-    color:#ff6a1a;
     margin-top:15px;
+    color:#ff6a1a;
 }
-
-.host-card p{
-    color:white;
-    padding-bottom:20px;
-}
-
-/* =========================
-   RANKINGS
-========================= */
 
 .cards{
     display:grid;
@@ -193,88 +157,22 @@ h2{
 }
 
 .card{
-    background:#111;
-    border-radius:15px;
+    background:#151515;
     padding:30px;
-    border:1px solid #333;
+    border-radius:15px;
     text-align:center;
-}
-
-.card h3{
-    color:#ff6a1a;
-    margin-bottom:10px;
-}
-
-.card p{
-    color:white;
-}
-
-/* =========================
-   YOUTUBE
-========================= */
-
-#youtube{
-    text-align:center;
-}
-
-.video-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-    gap:30px;
 }
 
 .video-grid iframe{
     width:100%;
-    height:250px;
+    height:500px;
     border:none;
     border-radius:15px;
 }
 
-/* =========================
-   FOOTER
-========================= */
-
 footer{
-    background:#111;
-    padding:30px;
+    background:#000;
     text-align:center;
-    border-top:1px solid #333;
-}
-
-footer p{
-    margin:10px 0;
-    color:white;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width:768px){
-
-    nav{
-        flex-direction:column;
-        gap:15px;
-    }
-
-    nav ul{
-        flex-wrap:wrap;
-        justify-content:center;
-    }
-
-    .hero h1{
-        font-size:2.5rem;
-    }
-
-    .hero p{
-        font-size:1rem;
-    }
-
-    .hero-logo{
-        width:220px;
-    }
-
-    .hero-content{
-        transform:translateY(-80px);
-    }
+    padding:40px;
+    margin-top:50px;
 }
