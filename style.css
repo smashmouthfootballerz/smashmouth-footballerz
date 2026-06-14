@@ -98,8 +98,11 @@ nav a:hover{
 }
 
 .hero-logo{
-    width:280px;
-    margin-bottom:30px;
+    width:1px;
+    height:1px;
+    opacity:0;
+    margin-bottom:40px;
+
 }
 
 .hero h1{
