@@ -69,7 +69,7 @@ nav a:hover{
 .hero{
     position:relative;
 
-    min-height:100vh;
+    min-height:120vh;
 
     display:flex;
     align-items:center;
@@ -79,7 +79,7 @@ nav a:hover{
 
     background:url("Smash Mouth.jpg");
     background-size:cover;
-    background-position:center top;
+    background-position:center center;
 }
 
 .hero-overlay{
