@@ -1,261 +1,29 @@
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-}
 body{
-font-family:Arial,sans-serif;
-background:#0a0a0a;
-color:white;
+    font-family:Arial, sans-serif;
+    background:#000;
+    color:#fff;
 }
+
+/* NAVIGATION */
 
 nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 50px;
-background:#111;
-}
-
-.logo{
-height:70px;
-}
-
-nav ul{
-display:flex;
-list-style:none;
-gap:25px;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-}
-
-.hero{
-    position:relative;
-    height:100vh;
-
-    background-image:url('Smash Mouth.jpg');
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-
     display:flex;
+    justify-content:space-between;
     align-items:center;
-    justify-content:center;
-    text-align:center;
-    overflow:hidden;
-}
-
-.hero::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,.80);
-}
-
-.hero-content{
-    position:relative;
-    z-index:2;
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-
-    margin-top:-180px; /* Moves entire logo block upward */
-}
-
-.hero-logo {
-    width: 350px;
-    max-width: 80%;
-    height: auto;
-    display: block;
-    margin: -40px auto 20px auto;
-}
-
-.hero h1{
-    color:white;
-    font-size:4rem;
-    margin-bottom:20px;
-}
-
-.hero p{
-    color:white;
-    font-size:1.5rem;
-    margin-bottom:30px;
-}
-}
-
-.btn{
-display:inline-block;
-padding:15px 30px;
-background:#ff6a1a;
-color:white;
-text-decoration:none;
-border-radius:8px;
-}
-
-.host-images{
-display:flex;
-gap:30px;
-margin-top:50px;
-flex-wrap:wrap;
-justify-content:center;
-}
-
-.host-images img{
-height:350px;
-border-radius:15px;
-}
-
-section{
-padding:80px 10%;
-}
-
-h2{
-text-align:center;
-margin-bottom:40px;
-color:#ff6a1a;
-font-size:2.5rem;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.card{
-background:#151515;
-padding:30px;
-border-radius:15px;
-border:1px solid #333;
-}
-
-footer{
-padding:30px;
-text-align:center;
-background:#111;
-}
-.hero{
-position:relative;
-height:100vh;
-overflow:hidden;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-}
-
-.hero-video{
-position:absolute;
-width:100%;
-height:100%;
-object-fit:cover;
-z-index:0;
-}
-
-.overlay{
-position:absolute;
-inset:0;
-background:rgba(0,0,0,.75);
-z-index:1;
-}
-
-.hero-content{
-position:relative;
-z-index:2;
-}
-
-.hero-logo{
-max-width:700px;
-width:90%;
-margin-bottom:30px;
-}
-
-.host-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
-}
-
-.host-card{
-background:#151515;
-padding:20px;
-border-radius:20px;
-text-align:center;
-transition:.3s;
-}
-
-.host-card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 25px #ff6a1a;
-}
-
-.host-card img{
-width:100%;
-border-radius:15px;
-}
-.host-images{
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    flex-wrap:wrap;
-    margin-top:50px;
-}
-
-.host-images img{
-    width:400px;
-    max-width:100%;
-    border-radius:20px;
-    transition:0.3s;
-}
-
-.host-images img:hover{
-    transform:scale(1.05);
-}
-.hero-logo{
-    max-width:700px;
-    width:90%;
-    height:auto;
-}
-#youtube{
-    text-align:center;
-}
-
-footer{
+    padding:20px 50px;
     background:#111;
-    text-align:center;
-    padding:40px;
-    margin-top:50px;
-    border-top:1px solid #333;
+    position:sticky;
+    top:0;
+    z-index:999;
 }
 
-footer p{
-    margin:10px 0;
-}
-
-.card h3{
-    color:#ff6a1a;
-    margin-bottom:15px;
-}
-.video-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-    gap:30px;
-    margin-top:30px;
-}
-
-.video-grid iframe{
-    width:100%;
-    height:250px;
-    border:none;
-    border-radius:15px;
-    background:#000;
-    .logo-brand{
+.logo-brand{
     display:flex;
     align-items:center;
     gap:12px;
@@ -268,8 +36,186 @@ footer p{
 }
 
 .brand-text{
-    font-family:'Permanent Marker', cursive;
+    font-size:1.4rem;
+    font-weight:bold;
     color:white;
-    font-size:1.3rem;
-    letter-spacing:1px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ff6a1a;
+}
+
+/* HERO SECTION */
+
+.hero{
+    position:relative;
+    height:100vh;
+
+    background-image:url('Smash Mouth.jpg');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.75);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    transform:translateY(-140px);
+}
+
+.hero-logo{
+    width:320px;
+    max-width:80%;
+    height:auto;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:4rem;
+    color:white;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.4rem;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    background:#ff6a1a;
+    color:white;
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#ff823d;
+}
+
+/* SECTIONS */
+
+section{
+    padding:80px 10%;
+    background:#000;
+}
+
+h2{
+    text-align:center;
+    color:white;
+    font-size:2.5rem;
+    margin-bottom:40px;
+}
+
+/* HOSTS */
+
+.host-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.host-card{
+    background:#111;
+    border-radius:20px;
+    overflow:hidden;
+    text-align:center;
+    transition:.3s;
+}
+
+.host-card:hover{
+    transform:translateY(-10px);
+}
+
+.host-card img{
+    width:100%;
+    display:block;
+}
+
+.host-card h3{
+    margin-top:15px;
+    color:#ff6a1a;
+}
+
+.host-card p{
+    padding-bottom:20px;
+}
+
+/* RANKINGS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#111;
+    border-radius:15px;
+    padding:30px;
+    text-align:center;
+    border:1px solid #333;
+}
+
+.card h3{
+    color:#ff6a1a;
+}
+
+/* YOUTUBE */
+
+#youtube{
+    text-align:center;
+}
+
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:30px;
+}
+
+.video-grid iframe{
+    width:100%;
+    height:250px;
+    border:none;
+    border-radius:15px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    text-align:center;
+    padding:30px;
 }
