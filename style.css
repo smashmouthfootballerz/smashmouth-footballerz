@@ -68,13 +68,12 @@ text-decoration:none;
     margin-top:-180px; /* Moves entire logo block upward */
 }
 
-.hero-logo{
-    max-width:700px;
-    width:90%;
-
-    margin-bottom:40px;
-
-    transform:translateY(-100px); /* Move logo up */
+.hero-logo {
+    width: 350px;
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: -40px auto 20px auto;
 }
 
 .hero h1{
