@@ -5,23 +5,27 @@
 }
 
 body{
-    font-family:Arial,sans-serif;
     background:#0a0a0a;
     color:white;
+    font-family:Arial,sans-serif;
 }
+
+/* NAVBAR */
 
 nav{
     position:fixed;
     top:0;
+    left:0;
     width:100%;
-    z-index:1000;
 
     display:flex;
     justify-content:space-between;
     align-items:center;
 
-    padding:20px 50px;
+    padding:18px 40px;
+
     background:#000;
+    z-index:999;
 }
 
 .logo-brand{
@@ -31,19 +35,20 @@ nav{
 }
 
 .crest-logo{
-    width:60px;
+    width:55px;
+    height:auto;
 }
 
 .brand-text{
     font-family:'Permanent Marker',cursive;
     color:white;
-    font-size:1.8rem;
+    font-size:1.5rem;
 }
 
 nav ul{
     display:flex;
+    gap:35px;
     list-style:none;
-    gap:30px;
 }
 
 nav a{
@@ -52,54 +57,64 @@ nav a{
     font-weight:bold;
 }
 
+/* HERO */
+
 .hero{
     position:relative;
+
     height:100vh;
 
     background-image:url('Smash Mouth.jpg');
     background-size:cover;
 
-    /* Shows more of the bottom text */
-    background-position:center 85%;
+    /* shows bottom lettering */
+    background-position:center bottom;
 
     display:flex;
     justify-content:center;
     align-items:center;
-    text-align:center;
+
+    overflow:hidden;
 }
 
 .overlay{
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,.65);
+    background:rgba(0,0,0,.70);
 }
 
 .hero-content{
     position:relative;
     z-index:2;
 
-    max-width:1000px;
+    text-align:center;
 
-    /* Move everything below Chad's face */
-    transform:translateY(100px);
+    /* pushes content lower */
+    margin-top:180px;
 }
 
 .hero-logo{
-    width:300px;
-    max-width:80%;
+    width:280px;
     height:auto;
 
-    margin-bottom:25px;
+    display:block;
+    margin:0 auto 25px auto;
 }
 
 .hero h1{
-    font-size:4rem;
+    font-size:5rem;
+    font-weight:800;
+
     margin-bottom:20px;
+
+    color:white;
+
+    text-shadow:0 0 20px rgba(0,0,0,.8);
 }
 
 .hero p{
-    font-size:1.5rem;
-    margin-bottom:30px;
+    font-size:1.8rem;
+    margin-bottom:35px;
 }
 
 .btn{
@@ -108,13 +123,21 @@ nav a{
     padding:18px 40px;
 
     background:#ff6a1a;
+
     color:white;
 
     text-decoration:none;
+
     font-weight:bold;
 
     border-radius:10px;
 }
+
+.btn:hover{
+    background:#ff812f;
+}
+
+/* SECTIONS */
 
 section{
     padding:100px 10%;
@@ -122,10 +145,12 @@ section{
 
 h2{
     text-align:center;
-    font-size:3rem;
     color:#ff6a1a;
+    font-size:3rem;
     margin-bottom:50px;
 }
+
+/* HOSTS */
 
 .host-grid{
     display:grid;
@@ -135,44 +160,50 @@ h2{
 
 .host-card{
     background:#151515;
-    padding:20px;
     border-radius:20px;
+    overflow:hidden;
     text-align:center;
 }
 
 .host-card img{
     width:100%;
-    border-radius:15px;
+    display:block;
 }
 
 .host-card h3{
-    margin-top:15px;
     color:#ff6a1a;
+    padding-top:15px;
 }
+
+.host-card p{
+    padding-bottom:20px;
+}
+
+/* RANKINGS */
 
 .cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:25px;
 }
 
 .card{
     background:#151515;
-    padding:30px;
     border-radius:15px;
+    padding:30px;
     text-align:center;
 }
 
-.video-grid iframe{
-    width:100%;
-    height:500px;
-    border:none;
-    border-radius:15px;
+/* YOUTUBE */
+
+.youtube-box{
+    text-align:center;
 }
+
+/* FOOTER */
 
 footer{
     background:#000;
-    text-align:center;
     padding:40px;
-    margin-top:50px;
+    text-align:center;
 }
