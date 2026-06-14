@@ -210,21 +210,10 @@ footer p{
     margin-bottom:15px;
 }
 .video-grid{
-    display:flex;
-    justify-content:center;
-}
-
-.video-grid iframe{
-    width:100%;
-    max-width:1000px;
-    height:560px;
-    border:none;
-    border-radius:20px;
-}
-.video-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
     gap:30px;
+    margin-top:30px;
 }
 
 .video-grid iframe{
@@ -232,4 +221,5 @@ footer p{
     height:250px;
     border:none;
     border-radius:15px;
+    background:#000;
 }
