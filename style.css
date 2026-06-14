@@ -15,7 +15,7 @@ body{
     overflow-x:hidden;
 }
 
-/* NAVBAR */
+/* NAVIGATION */
 
 .navbar{
     position:fixed;
@@ -28,9 +28,10 @@ body{
     justify-content:space-between;
     align-items:center;
 
-    padding:20px 50px;
+    padding:18px 50px;
 
-    background:rgba(0,0,0,.85);
+    background:rgba(0,0,0,.92);
+
     backdrop-filter:blur(10px);
 }
 
@@ -45,8 +46,10 @@ body{
 }
 
 .logo-brand span{
+    color:white;
     font-size:2rem;
-    font-weight:700;
+    font-weight:bold;
+    font-family:'Permanent Marker', cursive;
 }
 
 nav{
@@ -57,7 +60,8 @@ nav{
 nav a{
     color:white;
     text-decoration:none;
-    font-weight:700;
+    font-size:1.1rem;
+    font-weight:bold;
 }
 
 nav a:hover{
@@ -67,187 +71,269 @@ nav a:hover{
 /* HERO */
 
 .hero{
+
     position:relative;
 
-    min-height:100vh;
+    height:100vh;
+
+    background-image:url("Smash Mouth.jpg");
+
+    background-size:cover;
+
+    background-position:center top;
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
     text-align:center;
-
-    background:url("Smash Mouth.jpg");
-    background-size:cover;
-    background-position:center 15%;
 }
 
 .hero-overlay{
+
     position:absolute;
+
     inset:0;
 
     background:rgba(0,0,0,.55);
 }
 
 .hero-content{
+
     position:relative;
+
     z-index:5;
 
-    width:90%;
-    max-width:1400px;
-}
+    margin-top:140px;
 
-.hero-logo{
-    width:1px;
-    height:1px;
-    opacity:0;
-    margin-bottom:40px;
+    max-width:1200px;
 
+    padding:0 20px;
 }
 
 .hero h1{
+
     font-size:5rem;
+
     font-weight:900;
-    margin-bottom:20px;
+
+    margin-bottom:25px;
+
+    text-shadow:0 0 20px rgba(0,0,0,.7);
 }
 
 .hero p{
+
     font-size:2rem;
+
     margin-bottom:40px;
 }
 
 .hero-btn{
+
     display:inline-block;
 
-    padding:18px 45px;
-
     background:#ff6600;
+
     color:white;
 
     text-decoration:none;
-    font-weight:700;
 
-    border-radius:8px;
+    padding:18px 45px;
+
+    border-radius:10px;
+
+    font-weight:bold;
 }
 
 .hero-btn:hover{
-    background:#ff7f24;
+
+    background:#ff7f22;
 }
 
 /* HOSTS */
 
 .hosts-section{
-    padding:100px 50px;
+
+    padding:80px 60px;
+
+    background:#000;
 }
 
 .hosts-section h2{
+
     text-align:center;
+
     color:#ff6600;
+
     font-size:3rem;
-    margin-bottom:60px;
+
+    margin-bottom:50px;
 }
 
 .hosts-grid{
+
+    max-width:1400px;
+
+    margin:auto;
+
     display:grid;
+
     grid-template-columns:repeat(3,1fr);
+
     gap:30px;
 }
 
 .host-card{
+
     background:#111;
+
     border-radius:15px;
+
     overflow:hidden;
+
+    transition:.3s;
+}
+
+.host-card:hover{
+
+    transform:translateY(-5px);
 }
 
 .host-card img{
+
     width:100%;
-    height:280px;
+
+    height:300px;
+
     object-fit:cover;
 }
 
 .host-info{
+
     padding:25px;
 }
 
 .host-info h3{
+
     color:#ff6600;
+
     margin-bottom:10px;
+
+    font-size:1.5rem;
 }
 
 .host-info p{
-    font-size:1.2rem;
+
+    font-size:1.1rem;
 }
 
 /* RANKINGS */
 
 .rankings-section{
-    padding:100px 50px;
+
+    padding:80px 60px;
 }
 
 .rankings-section h2{
+
     text-align:center;
+
     color:#ff6600;
+
     font-size:3rem;
-    margin-bottom:60px;
+
+    margin-bottom:50px;
 }
 
 .rankings-grid{
+
     display:grid;
+
     grid-template-columns:repeat(5,1fr);
+
     gap:25px;
+
+    max-width:1400px;
+
+    margin:auto;
 }
 
 .ranking-card{
+
     background:#111;
 
     color:white;
+
     text-decoration:none;
+
+    border-radius:15px;
 
     height:140px;
 
     display:flex;
-    align-items:center;
+
     justify-content:center;
 
-    border-radius:15px;
+    align-items:center;
+
+    font-weight:bold;
 
     font-size:1.2rem;
-    font-weight:700;
+
+    transition:.3s;
 }
 
 .ranking-card:hover{
+
     border:2px solid #ff6600;
+
+    transform:translateY(-5px);
 }
 
 /* VIDEOS */
 
 .videos-section{
-    padding:100px 50px;
+
+    padding:80px 60px;
 }
 
 .videos-section h2{
+
     text-align:center;
+
     color:#ff6600;
+
     font-size:3rem;
-    margin-bottom:60px;
+
+    margin-bottom:50px;
 }
 
 .video-wrapper{
+
     max-width:1200px;
+
     margin:auto;
 }
 
 .video-wrapper iframe{
+
     width:100%;
+
     height:675px;
 }
 
 /* FOOTER */
 
 footer{
-    text-align:center;
-    padding:40px;
+
     background:#111;
+
+    text-align:center;
+
+    padding:40px;
 }
 
 /* MOBILE */
