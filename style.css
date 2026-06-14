@@ -70,18 +70,14 @@ nav a:hover{
 
 /* HERO */
 
-.hero{
-
-   .hero {
+.hero {
     background-image: url('Smash Mouth.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 
-    .hero {
-    background-position: center 25%;
+    background-position: center 15%;
 
     min-height: 100vh;
-}
 }
 
 .hero-overlay{
