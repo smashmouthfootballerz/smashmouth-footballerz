@@ -4,27 +4,34 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     background:#000;
-    color:#fff;
+    color:white;
     font-family:Arial, Helvetica, sans-serif;
+    overflow-x:hidden;
 }
 
 /* NAVBAR */
 
-header{
+.navbar{
     position:fixed;
     top:0;
+    left:0;
     width:100%;
     z-index:1000;
-
-    background:rgba(0,0,0,.85);
 
     display:flex;
     justify-content:space-between;
     align-items:center;
 
     padding:20px 50px;
+
+    background:rgba(0,0,0,.85);
+    backdrop-filter:blur(10px);
 }
 
 .logo-brand{
@@ -38,50 +45,44 @@ header{
 }
 
 .logo-brand span{
-    color:white;
     font-size:2rem;
-    font-weight:bold;
+    font-weight:700;
 }
 
 nav{
     display:flex;
-    gap:35px;
+    gap:40px;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    font-size:1.1rem;
+    font-weight:700;
 }
 
 nav a:hover{
-    color:#ff661a;
+    color:#ff6600;
 }
 
 /* HERO */
 
 .hero{
     position:relative;
-    height:100vh;
 
-    background-image:url("Smash Mouth.jpg");
-
-    background-size:cover;
-
-    background-position:center top;
-
-    background-repeat:no-repeat;
+    min-height:100vh;
 
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
 
     text-align:center;
+
+    background:url("Smash Mouth.jpg");
+    background-size:cover;
+    background-position:center top;
 }
 
-.hero::before{
-    content:"";
-
+.hero-overlay{
     position:absolute;
     inset:0;
 
@@ -92,61 +93,60 @@ nav a:hover{
     position:relative;
     z-index:5;
 
-    margin-top:150px;
+    width:90%;
+    max-width:1400px;
 }
 
 .hero-logo{
-    width:260px;
-    margin-bottom:25px;
+    width:280px;
+    margin-bottom:30px;
 }
 
 .hero h1{
     font-size:5rem;
+    font-weight:900;
     margin-bottom:20px;
 }
 
 .hero p{
-    font-size:1.8rem;
-    margin-bottom:30px;
+    font-size:2rem;
+    margin-bottom:40px;
 }
 
 .hero-btn{
     display:inline-block;
 
-    padding:18px 40px;
+    padding:18px 45px;
 
-    background:#ff661a;
-
+    background:#ff6600;
     color:white;
 
     text-decoration:none;
+    font-weight:700;
 
-    border-radius:10px;
-
-    font-weight:bold;
+    border-radius:8px;
 }
 
 .hero-btn:hover{
-    background:#ff7f38;
+    background:#ff7f24;
 }
 
 /* HOSTS */
 
-#hosts{
-    background:#000;
-    padding:100px 8%;
+.hosts-section{
+    padding:100px 50px;
 }
 
-#hosts h2{
+.hosts-section h2{
     text-align:center;
-    color:#ff661a;
+    color:#ff6600;
     font-size:3rem;
     margin-bottom:60px;
 }
 
-.host-grid{
+.hosts-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    grid-template-columns:repeat(3,1fr);
     gap:30px;
 }
 
@@ -158,81 +158,117 @@ nav a:hover{
 
 .host-card img{
     width:100%;
-    height:300px;
+    height:280px;
     object-fit:cover;
 }
 
 .host-info{
-    padding:20px;
+    padding:25px;
 }
 
 .host-info h3{
-    color:#ff661a;
+    color:#ff6600;
     margin-bottom:10px;
+}
+
+.host-info p{
+    font-size:1.2rem;
 }
 
 /* RANKINGS */
 
-#rankings{
-    background:#000;
-    padding:100px 8%;
+.rankings-section{
+    padding:100px 50px;
 }
 
-#rankings h2{
+.rankings-section h2{
     text-align:center;
-    color:#ff661a;
+    color:#ff6600;
     font-size:3rem;
     margin-bottom:60px;
 }
 
 .rankings-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(5,1fr);
     gap:25px;
 }
 
-.rank-card{
+.ranking-card{
     background:#111;
+
+    color:white;
+    text-decoration:none;
+
+    height:140px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
     border-radius:15px;
-    padding:40px;
+
+    font-size:1.2rem;
+    font-weight:700;
+}
+
+.ranking-card:hover{
+    border:2px solid #ff6600;
+}
+
+/* VIDEOS */
+
+.videos-section{
+    padding:100px 50px;
+}
+
+.videos-section h2{
     text-align:center;
-    font-size:1.3rem;
-    font-weight:bold;
-}
-
-.rank-card:hover{
-    border:1px solid #ff661a;
-}
-
-/* YOUTUBE */
-
-#youtube{
-    background:#000;
-    padding:100px 8%;
-}
-
-#youtube h2{
-    text-align:center;
-    color:#ff661a;
+    color:#ff6600;
     font-size:3rem;
-    margin-bottom:40px;
+    margin-bottom:60px;
 }
 
-.video-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
-    gap:25px;
+.video-wrapper{
+    max-width:1200px;
+    margin:auto;
 }
 
-.video-grid iframe{
+.video-wrapper iframe{
     width:100%;
-    height:250px;
+    height:675px;
 }
 
 /* FOOTER */
 
 footer{
-    background:#111;
     text-align:center;
     padding:40px;
+    background:#111;
+}
+
+/* MOBILE */
+
+@media(max-width:1000px){
+
+    .hosts-grid{
+        grid-template-columns:1fr;
+    }
+
+    .rankings-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    .hero p{
+        font-size:1.2rem;
+    }
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
 }
