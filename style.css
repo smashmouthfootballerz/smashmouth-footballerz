@@ -4,30 +4,27 @@
     box-sizing:border-box;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
 body{
-    background:#050505;
+    background:#000;
     color:#fff;
     font-family:Arial, Helvetica, sans-serif;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* NAVBAR */
 
 header{
-    position:absolute;
+    position:fixed;
     top:0;
-    left:0;
     width:100%;
-    z-index:999;
+    z-index:1000;
+
+    background:rgba(0,0,0,.85);
+
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:25px 60px;
+
+    padding:20px 50px;
 }
 
 .logo-brand{
@@ -41,9 +38,9 @@ header{
 }
 
 .logo-brand span{
-    font-family:'Permanent Marker', cursive;
     color:white;
-    font-size:1.8rem;
+    font-size:2rem;
+    font-weight:bold;
 }
 
 nav{
@@ -54,17 +51,14 @@ nav{
 nav a{
     color:white;
     text-decoration:none;
-    font-weight:bold;
-    transition:.3s;
+    font-size:1.1rem;
 }
 
 nav a:hover{
-    color:#ff6a1a;
+    color:#ff661a;
 }
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero{
     position:relative;
@@ -83,13 +77,14 @@ nav a:hover{
     align-items:center;
 
     text-align:center;
-
-    overflow:hidden;
 }
 
-.hero-overlay{
+.hero::before{
+    content:"";
+
     position:absolute;
     inset:0;
+
     background:rgba(0,0,0,.55);
 }
 
@@ -97,140 +92,74 @@ nav a:hover{
     position:relative;
     z-index:5;
 
-    width:100%;
-    max-width:1400px;
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-
-    margin-top:180px;
+    margin-top:150px;
 }
 
 .hero-logo{
-    width:280px;
-
-    margin-bottom:35px;
-
-    background:transparent;
+    width:260px;
+    margin-bottom:25px;
 }
 
 .hero h1{
     font-size:5rem;
-
-    color:white;
-
-    font-weight:800;
-
-    text-shadow:0 0 20px rgba(0,0,0,.8);
-
     margin-bottom:20px;
 }
 
 .hero p{
-    font-size:2rem;
-
-    color:white;
-
-    margin-bottom:35px;
+    font-size:1.8rem;
+    margin-bottom:30px;
 }
 
 .hero-btn{
+    display:inline-block;
+
+    padding:18px 40px;
+
     background:#ff661a;
 
     color:white;
 
-    padding:18px 40px;
+    text-decoration:none;
 
     border-radius:10px;
 
-    text-decoration:none;
-
-    font-weight:700;
-
-    transition:.3s;
+    font-weight:bold;
 }
 
 .hero-btn:hover{
     background:#ff7f38;
 }
-/* =========================
-   BIG SMASHMOUTH TEXT
-========================= */
 
-.hero::after{
-
-    content:"SmashMouth FootballerZ";
-
-    position:absolute;
-
-    left:50%;
-    bottom:10px;
-
-    transform:translateX(-50%);
-
-    font-size:8rem;
-    font-style:italic;
-    font-weight:900;
-
-    white-space:nowrap;
-
-    color:transparent;
-
-    -webkit-text-stroke:2px rgba(255,255,255,.25);
-
-    text-shadow:
-    0 0 10px #ff5500,
-    0 0 25px #ff00ff,
-    0 0 40px #0066ff;
-
-    opacity:.95;
-
-    z-index:1;
-}
-
-/* =========================
-   HOSTS
-========================= */
+/* HOSTS */
 
 #hosts{
+    background:#000;
     padding:100px 8%;
-    background:#0a0a0a;
 }
 
 #hosts h2{
     text-align:center;
+    color:#ff661a;
     font-size:3rem;
-    margin-bottom:50px;
-    color:#ff6a1a;
+    margin-bottom:60px;
 }
 
 .host-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
     gap:30px;
-    max-width:1400px;
-    margin:auto;
 }
 
 .host-card{
     background:#111;
-    border:1px solid #222;
-    border-radius:20px;
+    border-radius:15px;
     overflow:hidden;
-    transition:.3s;
-}
-
-.host-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 0 25px rgba(255,102,26,.4);
 }
 
 .host-card img{
     width:100%;
     height:300px;
     object-fit:cover;
-    display:block;
 }
 
 .host-info{
@@ -239,102 +168,71 @@ nav a:hover{
 
 .host-info h3{
     color:#ff661a;
-    font-size:1.6rem;
-    margin-bottom:8px;
+    margin-bottom:10px;
 }
 
-.host-info p{
-    color:white;
-}
-
-/* =========================
-   RANKINGS
-========================= */
+/* RANKINGS */
 
 #rankings{
+    background:#000;
     padding:100px 8%;
-    background:#050505;
 }
 
 #rankings h2{
     text-align:center;
-    color:#ff6a1a;
+    color:#ff661a;
     font-size:3rem;
-    margin-bottom:50px;
+    margin-bottom:60px;
 }
 
-.rank-grid{
+.rankings-grid{
     display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:20px;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
 }
 
 .rank-card{
     background:#111;
     border-radius:15px;
-    padding:40px 20px;
+    padding:40px;
     text-align:center;
+    font-size:1.3rem;
     font-weight:bold;
-    border:1px solid #222;
-    transition:.3s;
 }
 
 .rank-card:hover{
-    transform:translateY(-5px);
-    border-color:#ff6a1a;
+    border:1px solid #ff661a;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* YOUTUBE */
+
+#youtube{
+    background:#000;
+    padding:100px 8%;
+}
+
+#youtube h2{
+    text-align:center;
+    color:#ff661a;
+    font-size:3rem;
+    margin-bottom:40px;
+}
+
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+    gap:25px;
+}
+
+.video-grid iframe{
+    width:100%;
+    height:250px;
+}
+
+/* FOOTER */
 
 footer{
-    background:black;
+    background:#111;
     text-align:center;
     padding:40px;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:1000px){
-
-    .hero{
-        background-position:center top;
-    }
-
-    .hero-content{
-        margin-top:80px;
-    }
-
-    .hero-logo{
-        width:220px;
-    }
-
-    .hero h1{
-        font-size:3rem;
-    }
-
-    .hero p{
-        font-size:1.2rem;
-    }
-
-    .hero::after{
-        font-size:3.5rem;
-        bottom:20px;
-    }
-
-    .host-grid{
-        grid-template-columns:1fr;
-    }
-
-    .rank-grid{
-        grid-template-columns:1fr;
-    }
-
-    header{
-        flex-direction:column;
-        gap:15px;
-    }
 }
