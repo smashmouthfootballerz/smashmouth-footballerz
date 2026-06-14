@@ -189,3 +189,23 @@ border-radius:15px;
     width:90%;
     height:auto;
 }
+#youtube{
+    text-align:center;
+}
+
+footer{
+    background:#111;
+    text-align:center;
+    padding:40px;
+    margin-top:50px;
+    border-top:1px solid #333;
+}
+
+footer p{
+    margin:10px 0;
+}
+
+.card h3{
+    color:#ff6a1a;
+    margin-bottom:15px;
+}
