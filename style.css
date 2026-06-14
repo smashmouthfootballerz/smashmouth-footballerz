@@ -38,7 +38,7 @@ text-decoration:none;
     position:relative;
     height:100vh;
 
-    background-image:url("./Smash Mouth.jpg");
+    background-image:url('Smash Mouth.jpg');
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
@@ -54,12 +54,40 @@ text-decoration:none;
     content:"";
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,.65);
+    background:rgba(0,0,0,.80);
 }
 
 .hero-content{
     position:relative;
     z-index:2;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    margin-top:-180px; /* Moves entire logo block upward */
+}
+
+.hero-logo{
+    max-width:700px;
+    width:90%;
+
+    margin-bottom:40px;
+
+    transform:translateY(-100px); /* Move logo up */
+}
+
+.hero h1{
+    color:white;
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:white;
+    font-size:1.5rem;
+    margin-bottom:30px;
+}
 }
 .hero h1{
 font-size:4rem;
