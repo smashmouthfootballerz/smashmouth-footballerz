@@ -10,7 +10,9 @@ body{
     color:#fff;
 }
 
-/* NAVIGATION */
+/* =========================
+   NAVIGATION
+========================= */
 
 nav{
     display:flex;
@@ -20,7 +22,7 @@ nav{
     background:#111;
     position:sticky;
     top:0;
-    z-index:999;
+    z-index:1000;
 }
 
 .logo-brand{
@@ -36,9 +38,9 @@ nav{
 }
 
 .brand-text{
-    font-size:1.4rem;
-    font-weight:bold;
-    color:white;
+    font-family:'Permanent Marker', cursive;
+    color:#fff;
+    font-size:1.3rem;
 }
 
 nav ul{
@@ -47,17 +49,20 @@ nav ul{
     gap:25px;
 }
 
-nav a{
+nav ul li a{
     color:white;
     text-decoration:none;
     font-weight:bold;
+    transition:.3s;
 }
 
-nav a:hover{
+nav ul li a:hover{
     color:#ff6a1a;
 }
 
-/* HERO SECTION */
+/* =========================
+   HERO
+========================= */
 
 .hero{
     position:relative;
@@ -72,7 +77,6 @@ nav a:hover{
     justify-content:center;
     align-items:center;
     text-align:center;
-    overflow:hidden;
 }
 
 .hero::before{
@@ -90,14 +94,14 @@ nav a:hover{
     flex-direction:column;
     align-items:center;
 
-    transform:translateY(-140px);
+    transform:translateY(-120px);
 }
 
 .hero-logo{
-    width:320px;
+    width:300px;
     max-width:80%;
     height:auto;
-    margin-bottom:20px;
+    margin-bottom:25px;
 }
 
 .hero h1{
@@ -107,25 +111,29 @@ nav a:hover{
 }
 
 .hero p{
-    font-size:1.4rem;
+    font-size:1.3rem;
+    color:white;
     margin-bottom:30px;
 }
 
 .btn{
     display:inline-block;
+    padding:15px 35px;
     background:#ff6a1a;
     color:white;
     text-decoration:none;
-    padding:15px 30px;
-    border-radius:8px;
     font-weight:bold;
+    border-radius:8px;
+    transition:.3s;
 }
 
 .btn:hover{
-    background:#ff823d;
+    background:#ff8533;
 }
 
-/* SECTIONS */
+/* =========================
+   GENERAL SECTIONS
+========================= */
 
 section{
     padding:80px 10%;
@@ -134,12 +142,14 @@ section{
 
 h2{
     text-align:center;
-    color:white;
+    color:#ff6a1a;
     font-size:2.5rem;
     margin-bottom:40px;
 }
 
-/* HOSTS */
+/* =========================
+   HOSTS
+========================= */
 
 .host-grid{
     display:grid;
@@ -165,15 +175,18 @@ h2{
 }
 
 .host-card h3{
-    margin-top:15px;
     color:#ff6a1a;
+    margin-top:15px;
 }
 
 .host-card p{
+    color:white;
     padding-bottom:20px;
 }
 
-/* RANKINGS */
+/* =========================
+   RANKINGS
+========================= */
 
 .cards{
     display:grid;
@@ -185,15 +198,22 @@ h2{
     background:#111;
     border-radius:15px;
     padding:30px;
-    text-align:center;
     border:1px solid #333;
+    text-align:center;
 }
 
 .card h3{
     color:#ff6a1a;
+    margin-bottom:10px;
 }
 
-/* YOUTUBE */
+.card p{
+    color:white;
+}
+
+/* =========================
+   YOUTUBE
+========================= */
 
 #youtube{
     text-align:center;
@@ -212,37 +232,51 @@ h2{
     border-radius:15px;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
     background:#111;
-    text-align:center;
     padding:30px;
-}
-.logo-brand{
-    display:flex;
-    align-items:center;
-    gap:12px;
+    text-align:center;
+    border-top:1px solid #333;
 }
 
-.crest-logo{
-    width:45px;
-    height:45px;
-    object-fit:contain;
-}
-
-.brand-text{
+footer p{
+    margin:10px 0;
     color:white;
-    font-family:'Permanent Marker', cursive;
-    font-size:1.3rem;
 }
 
-.hero-logo{
-    width:300px !important;
-    max-width:80%;
-    height:auto;
-}
+/* =========================
+   MOBILE
+========================= */
 
-.hero-content{
-    transform:translateY(-120px);
+@media (max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:2.5rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+    .hero-logo{
+        width:220px;
+    }
+
+    .hero-content{
+        transform:translateY(-80px);
+    }
 }
