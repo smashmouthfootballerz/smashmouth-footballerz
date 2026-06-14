@@ -77,8 +77,8 @@ nav a:hover{
     background-size: cover;
     background-repeat: no-repeat;
 
-    /* Move image down so top heads show */
-    background-position: center top;
+    .hero {
+    background-position: center 25%;
 
     min-height: 100vh;
 }
