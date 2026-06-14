@@ -219,3 +219,30 @@ footer{
     text-align:center;
     padding:30px;
 }
+.logo-brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.crest-logo{
+    width:45px;
+    height:45px;
+    object-fit:contain;
+}
+
+.brand-text{
+    color:white;
+    font-family:'Permanent Marker', cursive;
+    font-size:1.3rem;
+}
+
+.hero-logo{
+    width:300px !important;
+    max-width:80%;
+    height:auto;
+}
+
+.hero-content{
+    transform:translateY(-120px);
+}
