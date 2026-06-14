@@ -90,56 +90,46 @@ nav a:hover{
 }
 
 .hero-content{
-
-    position:relative;
-
+    position:absolute;
+    top:55%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    text-align:center;
+    width:100%;
+    max-width:1000px;
     z-index:5;
-
-    margin-top:140px;
-
-    max-width:1200px;
-
-    padding:0 20px;
 }
 
-.hero h1{
-
-    font-size:5rem;
-
+.hero-content h1{
+    font-size:4.5rem;
     font-weight:900;
-
+    color:#fff;
+    line-height:1.1;
     margin-bottom:25px;
-
-    text-shadow:0 0 20px rgba(0,0,0,.7);
+    text-shadow:0 4px 15px rgba(0,0,0,.8);
 }
 
-.hero p{
-
+.hero-content p{
     font-size:2rem;
-
-    margin-bottom:40px;
+    color:#fff;
+    margin-bottom:35px;
 }
 
-.hero-btn{
-
+.hero-content .btn{
     display:inline-block;
-
-    background:#ff6600;
-
-    color:white;
-
-    text-decoration:none;
-
+    background:#ff6a13;
+    color:#fff;
     padding:18px 45px;
-
     border-radius:10px;
-
-    font-weight:bold;
+    font-weight:700;
+    text-decoration:none;
+    transition:.3s;
 }
 
-.hero-btn:hover{
-
-    background:#ff7f22;
+.hero-content .btn:hover{
+    background:#ff7e2f;
+    transform:translateY(-3px);
+}
 }
 
 /* HOSTS */
