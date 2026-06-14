@@ -174,40 +174,22 @@ nav a:hover{
 }
 
 .hosts-grid{
-
-    max-width:1400px;
-
-    margin:auto;
-
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
-
     gap:30px;
+    align-items:start;
 }
 
 .host-card{
-
     background:#111;
-
     border-radius:15px;
-
     overflow:hidden;
-
-    transition:.3s;
-}
-
-.host-card:hover{
-
-    transform:translateY(-5px);
 }
 
 .host-card img{
     width:100%;
-    height:300px;
-    object-fit:contain;
-    background:#111;
-}r;
+    height:auto;
+    display:block;
 }
 
 .host-info{
