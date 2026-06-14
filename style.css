@@ -68,78 +68,92 @@ nav a:hover{
 
 .hero{
     position:relative;
-    min-height:100vh;
+    height:100vh;
 
     background-image:url("Smash Mouth.jpg");
 
-    /* THIS SHOWS MORE OF JOE + CHAD */
     background-size:cover;
-    background-position:center 5%;
+
+    background-position:center top;
+
+    background-repeat:no-repeat;
 
     display:flex;
     justify-content:center;
     align-items:center;
 
+    text-align:center;
+
     overflow:hidden;
 }
 
-.overlay{
+.hero-overlay{
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,.65);
+    background:rgba(0,0,0,.55);
 }
 
 .hero-content{
     position:relative;
-    z-index:2;
-    text-align:center;
+    z-index:5;
 
-    /* moves logo + title down */
-    margin-top:140px;
+    width:100%;
+    max-width:1400px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    margin-top:180px;
 }
 
 .hero-logo{
     width:280px;
-    max-width:90%;
-    height:auto;
 
-    display:block;
-    margin:0 auto 35px auto;
+    margin-bottom:35px;
 
     background:transparent;
 }
 
 .hero h1{
-    font-size:5.5rem;
-    font-weight:900;
-    color:white;
-    margin-bottom:25px;
+    font-size:5rem;
 
-    text-shadow:
-    0 0 10px rgba(0,0,0,.8),
-    0 0 20px rgba(0,0,0,.5);
+    color:white;
+
+    font-weight:800;
+
+    text-shadow:0 0 20px rgba(0,0,0,.8);
+
+    margin-bottom:20px;
 }
 
 .hero p{
-    font-size:1.8rem;
-    margin-bottom:40px;
+    font-size:2rem;
+
+    color:white;
+
+    margin-bottom:35px;
 }
 
-.btn{
-    display:inline-block;
-    background:#ff6a1a;
+.hero-btn{
+    background:#ff661a;
+
     color:white;
-    text-decoration:none;
-    padding:18px 45px;
+
+    padding:18px 40px;
+
     border-radius:10px;
-    font-weight:bold;
+
+    text-decoration:none;
+
+    font-weight:700;
+
     transition:.3s;
 }
 
-.btn:hover{
-    background:#ff823b;
+.hero-btn:hover{
+    background:#ff7f38;
 }
-
 /* =========================
    BIG SMASHMOUTH TEXT
 ========================= */
