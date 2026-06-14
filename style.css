@@ -5,27 +5,23 @@
 }
 
 body{
-    background:#0a0a0a;
+    background:#050505;
     color:white;
-    font-family:Arial,sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-/* NAVBAR */
+/* HEADER */
 
-nav{
-    position:fixed;
+header{
+    position:absolute;
     top:0;
     left:0;
     width:100%;
-
+    z-index:999;
     display:flex;
     justify-content:space-between;
     align-items:center;
-
-    padding:18px 40px;
-
-    background:#000;
-    z-index:999;
+    padding:20px 60px;
 }
 
 .logo-brand{
@@ -34,26 +30,25 @@ nav{
     gap:15px;
 }
 
-.crest-logo{
+.logo-brand img{
     width:55px;
-    height:auto;
 }
 
-.brand-text{
-    font-family:'Permanent Marker',cursive;
+.logo-brand span{
+    font-family:'Permanent Marker', cursive;
+    font-size:2rem;
     color:white;
-    font-size:1.5rem;
 }
 
-nav ul{
+nav{
     display:flex;
-    gap:35px;
-    list-style:none;
+    gap:40px;
 }
 
 nav a{
     color:white;
     text-decoration:none;
+    font-size:1.1rem;
     font-weight:bold;
 }
 
@@ -61,18 +56,17 @@ nav a{
 
 .hero{
     position:relative;
-
     height:100vh;
 
     background-image:url('Smash Mouth.jpg');
-    background-size:cover;
 
-    /* shows bottom lettering */
-    background-position:center bottom;
+    /* THIS FIXES JOE & CHAD HEADS */
+    background-size:cover;
+    background-position:center top;
 
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
 
     overflow:hidden;
 }
@@ -80,36 +74,30 @@ nav a{
 .overlay{
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,.70);
+    background:rgba(0,0,0,.55);
 }
 
 .hero-content{
     position:relative;
     z-index:2;
-
     text-align:center;
 
-    /* pushes content lower */
-    margin-top:180px;
+    /* MOVES EVERYTHING LOWER */
+    margin-top:120px;
 }
 
 .hero-logo{
     width:280px;
-    height:auto;
+    margin-bottom:30px;
 
-    display:block;
-    margin:0 auto 25px auto;
+    /* removes white box if png is transparent */
+    background:transparent;
 }
 
 .hero h1{
     font-size:5rem;
-    font-weight:800;
-
+    font-weight:900;
     margin-bottom:20px;
-
-    color:white;
-
-    text-shadow:0 0 20px rgba(0,0,0,.8);
 }
 
 .hero p{
@@ -119,91 +107,151 @@ nav a{
 
 .btn{
     display:inline-block;
-
-    padding:18px 40px;
-
     background:#ff6a1a;
-
     color:white;
-
     text-decoration:none;
-
-    font-weight:bold;
-
+    padding:18px 45px;
     border-radius:10px;
+    font-weight:bold;
+    transition:.3s;
 }
 
 .btn:hover{
-    background:#ff812f;
+    background:#ff7d34;
 }
 
-/* SECTIONS */
+/* BIG NEON TEXT */
 
-section{
-    padding:100px 10%;
-}
+.hero::after{
 
-h2{
-    text-align:center;
-    color:#ff6a1a;
-    font-size:3rem;
-    margin-bottom:50px;
+    content:"SmashMouth FootballerZ";
+
+    position:absolute;
+    bottom:20px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-size:8rem;
+    font-weight:900;
+
+    white-space:nowrap;
+
+    color:transparent;
+
+    -webkit-text-stroke:3px rgba(255,255,255,.35);
+
+    text-shadow:
+    0 0 15px #ff3300,
+    0 0 25px #ff00ff,
+    0 0 35px #0066ff;
+
+    opacity:.9;
 }
 
 /* HOSTS */
 
+#hosts{
+    padding:100px 8%;
+    background:#0a0a0a;
+}
+
+#hosts h2{
+    text-align:center;
+    font-size:3rem;
+    margin-bottom:50px;
+}
+
 .host-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:30px;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
 }
 
 .host-card{
-    background:#151515;
-    border-radius:20px;
+    background:#111;
+    border:1px solid #222;
+    border-radius:15px;
     overflow:hidden;
-    text-align:center;
 }
 
 .host-card img{
     width:100%;
-    display:block;
+    height:220px;
+    object-fit:cover;
+}
+
+.host-card div{
+    padding:20px;
 }
 
 .host-card h3{
     color:#ff6a1a;
-    padding-top:15px;
-}
-
-.host-card p{
-    padding-bottom:20px;
+    margin-bottom:10px;
 }
 
 /* RANKINGS */
 
-.cards{
+#rankings{
+    padding:100px 8%;
+    background:#050505;
+}
+
+#rankings h2{
+    text-align:center;
+    font-size:3rem;
+    margin-bottom:50px;
+}
+
+.rank-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
+    grid-template-columns:repeat(5,1fr);
+    gap:20px;
 }
 
-.card{
-    background:#151515;
+.rank-card{
+    background:#111;
+    border:1px solid #222;
     border-radius:15px;
-    padding:30px;
     text-align:center;
+    padding:40px 20px;
+    font-weight:bold;
+    transition:.3s;
 }
 
-/* YOUTUBE */
-
-.youtube-box{
-    text-align:center;
+.rank-card:hover{
+    border-color:#ff6a1a;
+    transform:translateY(-5px);
 }
-
-/* FOOTER */
 
 footer{
-    background:#000;
-    padding:40px;
     text-align:center;
+    padding:40px;
+    background:black;
+}
+
+/* MOBILE */
+
+@media(max-width:1000px){
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    .hero::after{
+        font-size:4rem;
+    }
+
+    .host-grid{
+        grid-template-columns:1fr;
+    }
+
+    .rank-grid{
+        grid-template-columns:1fr;
+    }
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
 }
