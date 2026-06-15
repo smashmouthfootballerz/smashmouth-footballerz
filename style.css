@@ -326,3 +326,19 @@ footer{
         gap:15px;
     }
 }
+.shop-btn {
+    display: inline-block;
+    margin-left: 15px;
+    padding: 12px 24px;
+    background: #ff6600;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.shop-btn:hover {
+    background: #cc5200;
+    transform: scale(1.05);
+}
