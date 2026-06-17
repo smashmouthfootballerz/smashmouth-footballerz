@@ -10,12 +10,12 @@ html{
 
 body{
     background:#000;
-    color:#fff;
+    color:white;
     font-family:Arial, Helvetica, sans-serif;
     overflow-x:hidden;
 }
 
-/* NAVBAR */
+/* NAVIGATION */
 
 .navbar{
     position:fixed;
@@ -46,19 +46,21 @@ body{
 }
 
 .logo-brand span{
-    color:#fff;
+    color:white;
     font-size:2rem;
+    font-weight:bold;
     font-family:'Permanent Marker', cursive;
 }
 
 nav{
     display:flex;
-    gap:35px;
+    gap:40px;
 }
 
 nav a{
-    color:#fff;
+    color:white;
     text-decoration:none;
+    font-size:1.1rem;
     font-weight:bold;
 }
 
@@ -68,75 +70,93 @@ nav a:hover{
 
 /* HERO */
 
-.hero{
-    background:url('Smash Mouth.jpg') center center/cover no-repeat;
-    min-height:100vh;
-    position:relative;
+.hero {
+    background-image: url('Smash Mouth.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+
+    min-height: 100vh;
+    background-color: #000;
 }
 
 .hero-overlay{
+
     position:absolute;
+
     inset:0;
+
     background:rgba(0,0,0,.55);
 }
 
 .hero-content{
     position:absolute;
-    top:50%;
+    top:55%;
     left:50%;
-    transform:translate(-50%,-50%);
+    transform:translate(-50%, -50%);
     text-align:center;
-    width:90%;
+    width:100%;
     max-width:1000px;
     z-index:5;
 }
 
 .hero-content h1{
-    font-size:4rem;
-    margin-bottom:20px;
+    font-size:2.0rem;
+    font-weight:800;
+    color:#fff;
+    line-height:1.1;
+    margin-bottom:25px;
+    text-shadow:0 4px 15px rgba(0,0,0,.8);
 }
 
 .hero-content p{
-    font-size:1.5rem;
+    font-size:2rem;
+    color:#fff;
     margin-bottom:35px;
 }
 
-.hero-btn,
-.shop-btn{
+.hero-content .btn{
     display:inline-block;
-    background:#ff6600;
+    background:#ff6a13;
     color:#fff;
-    text-decoration:none;
-    padding:15px 30px;
+    padding:18px 45px;
     border-radius:10px;
-    font-weight:bold;
-    margin:10px;
+    font-weight:700;
+    text-decoration:none;
     transition:.3s;
 }
 
-.hero-btn:hover,
-.shop-btn:hover{
-    transform:translateY(-4px);
+.hero-content .btn:hover{
+    background:#ff7e2f;
+    transform:translateY(-3px);
+}
 }
 
 /* HOSTS */
 
 .hosts-section{
-    padding:80px 5%;
+
+    padding:80px 60px;
+
+    background:#000;
 }
 
 .hosts-section h2{
+
     text-align:center;
+
     color:#ff6600;
+
     font-size:3rem;
+
     margin-bottom:50px;
-    font-family:'Permanent Marker', cursive;
 }
 
 .hosts-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    grid-template-columns:repeat(3,1fr);
     gap:30px;
+    align-items:start;
 }
 
 .host-card{
@@ -147,81 +167,112 @@ nav a:hover{
 
 .host-card img{
     width:100%;
-    height:500px;
-    object-fit:cover;
+    height:auto;
     display:block;
 }
 
 .host-info{
-    padding:20px;
+
+    padding:25px;
 }
 
 .host-info h3{
+
     color:#ff6600;
+
     margin-bottom:10px;
+
+    font-size:1.5rem;
+}
+
+.host-info p{
+
+    font-size:1.1rem;
 }
 
 /* RANKINGS */
 
 .rankings-section{
-    padding:80px 5%;
+
+    padding:80px 60px;
 }
 
 .rankings-section h2{
+
     text-align:center;
+
     color:#ff6600;
+
     font-size:3rem;
+
     margin-bottom:50px;
 }
 
 .rankings-grid{
+
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:25px;
+
+    max-width:1400px;
+
+    margin:auto;
 }
 
 .ranking-card{
+
     background:#111;
-    color:#fff;
+
+    color:white;
+
     text-decoration:none;
-    height:140px;
+
     border-radius:15px;
 
+    height:140px;
+
     display:flex;
+
     justify-content:center;
+
     align-items:center;
 
     font-weight:bold;
+
+    font-size:1.2rem;
 
     transition:.3s;
 }
 
 .ranking-card:hover{
+
     border:2px solid #ff6600;
+
+    transform:translateY(-5px);
 }
 
 /* VIDEOS */
 
 .videos-section{
     padding:80px 5%;
+    background:#000;
 }
 
-.videos-section h2{
-    text-align:center;
-    color:#ff6600;
-    font-size:3rem;
-    margin-bottom:50px;
+.video-card iframe{
+    width:100%;
+    height:250px;
+    border:none;
+    border-radius:12px;
 }
-
-.videos-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-    gap:30px;
 }
 
 .video-card{
-    overflow:hidden;
     border-radius:15px;
+    overflow:hidden;
+    background:#111;
+    box-shadow:0 0 20px rgba(255,102,0,.15);
 }
 
 .video-card iframe{
@@ -230,34 +281,64 @@ nav a:hover{
     border:none;
 }
 
+@media(max-width:900px){
+    .videos-grid{
+        grid-template-columns:1fr;
+    }
+
+    .video-card iframe{
+        height:220px;
+    }
+}
 /* FOOTER */
 
 footer{
+
     background:#111;
+
     text-align:center;
+
     padding:40px;
 }
 
 /* MOBILE */
 
-@media(max-width:900px){
+@media(max-width:1000px){
+
+    .hosts-grid{
+        grid-template-columns:1fr;
+    }
+
+    .rankings-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    .hero p{
+        font-size:1.2rem;
+    }
 
     .navbar{
         flex-direction:column;
         gap:15px;
     }
-
-    nav{
-        flex-wrap:wrap;
-        justify-content:center;
-    }
-
-    .hero-content h1{
-        font-size:2.5rem;
-    }
-
-    .hero-content p{
-        font-size:1.2rem;
-    }
+}
+.shop-btn {
+    display: inline-block;
+    margin-left: 15px;
+    padding: 12px 24px;
+    background: #ff6600;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s ease;
 }
 
+.shop-btn:hover {
+    background: #cc5200;
+    transform: scale(1.05);
+}
