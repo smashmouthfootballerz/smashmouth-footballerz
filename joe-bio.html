@@ -4,43 +4,150 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Joe Caldero | Smashmouth Footballerz</title>
-
 <style>
-body{
-    margin:0;
-    background:#000;
-    text-align:center;
-    font-family:Arial,sans-serif;
+    .host-card{
+    position:relative;
+    max-width:1200px;
+    margin:50px auto;
+    background:#111;
+    border:4px solid #ff6600;
+    border-radius:25px;
+    overflow:hidden;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    padding:30px;
+    box-shadow:
+        0 0 20px #ff6600,
+        0 0 50px rgba(255,106,0,.5);
 }
 
-.poster{
-    width:min(95vw,1400px);
-    margin:30px auto;
-    display:block;
+.host-card:hover{
+    transform:scale(1.02);
+    transition:.3s ease;
+}
+
+.bio-poster{
+    width:100%;
     border-radius:15px;
-    box-shadow:0 0 25px rgba(255,106,0,.5);
 }
 
-.back-btn{
-    display:inline-block;
+.card-info{
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.card-info h1{
+    font-size:4rem;
+    color:#ff6600;
+    margin:0;
+}
+
+.card-info h2{
+    color:white;
+    margin-bottom:30px;
+}
+
+.attributes{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.attribute{
+    display:flex;
+    justify-content:space-between;
+    background:#1a1a1a;
+    padding:15px;
+    border-left:4px solid #ff6600;
+    border-radius:8px;
+}
+
+.attribute strong{
+    color:#ff6600;
+    font-size:1.4rem;
+}
+
+.rating-badge{
+    position:absolute;
+    top:20px;
+    right:20px;
+    width:100px;
+    height:100px;
+    border-radius:50%;
     background:#ff6600;
     color:white;
-    text-decoration:none;
-    padding:15px 30px;
-    border-radius:10px;
+    font-size:2.5rem;
     font-weight:bold;
-    margin-bottom:40px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 0 25px #ff6600;
 }
-</style>
-</head>
 
-<body>
+.rating-badge span{
+    font-size:.9rem;
+}
 
-<img src="Joe-Bio.png" alt="Joe Caldero Poster" class="poster">
+@media(max-width:900px){
 
-<a href="index.html#hosts" class="back-btn">
-← Back to Meet The Ballerz
-</a>
+.host-card{
+    grid-template-columns:1fr;
+}
+
+.card-info h1{
+    font-size:2.5rem;
+}
+
+}
+body{
+<div class="host-card">
+
+    <div class="rating-badge">
+        99
+        <span>OVR</span>
+    </div>
+
+    <img src="Joe-Bio.png" class="bio-poster">
+
+    <div class="card-info">
+        <h1>JOE CALDERO</h1>
+        <h2>RB GURU</h2>
+
+        <div class="attributes">
+
+            <div class="attribute">
+                <span>Waiver Wire Wizard</span>
+                <strong>98</strong>
+            </div>
+
+            <div class="attribute">
+                <span>Draft IQ</span>
+                <strong>99</strong>
+            </div>
+
+            <div class="attribute">
+                <span>RB Evaluation</span>
+                <strong>99</strong>
+            </div>
+
+            <div class="attribute">
+                <span>Championship Mindset</span>
+                <strong>100</strong>
+            </div>
+
+        </div>
+
+        <a href="index.html#hosts" class="back-btn">
+            ← Back To Meet The Ballerz
+        </a>
+
+    </div>
+
+</div>
 
 </body>
 </html>
