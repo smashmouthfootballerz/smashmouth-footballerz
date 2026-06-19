@@ -161,13 +161,17 @@ document.querySelectorAll('.open-pack').forEach(pack => {
 
         const text = document.getElementById('opening-text');
 
-        if(destination.includes('joe')){
-            text.innerHTML = 'OPENING EPIC PACK...';
-        } else if(destination.includes('nic')){
-            text.innerHTML = 'OPENING LEGENDARY PACK...';
-        } else if(destination.includes('chad')){
-            text.innerHTML = 'OPENING RARE DYNASTY PACK...';
-        }
+       const imageSrc = image.src.toLowerCase();
+
+if(imageSrc.includes('joe-pack')){
+    text.innerHTML = 'OPENING EPIC PACK...';
+}
+else if(imageSrc.includes('nic-pack')){
+    text.innerHTML = 'OPENING LEGENDARY PACK...';
+}
+else if(imageSrc.includes('chad-pack')){
+    text.innerHTML = 'OPENING RARE DYNASTY PACK...';
+}
 
         setTimeout(() => {
             window.location.href = destination;
