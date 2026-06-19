@@ -11,34 +11,99 @@
 body{
     margin:0;
     padding:30px;
-    background:
-    radial-gradient(circle at center,#1a0000 0%,#000 70%);
+    background:radial-gradient(circle at center,#1a0000 0%,#000000 70%);
     color:white;
-    font-family:Arial,sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 .host-card{
     position:relative;
     max-width:1400px;
     margin:40px auto;
-
     background:#111;
-
     border:4px solid #ff0000;
     border-radius:25px;
-
     overflow:hidden;
-
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:30px;
-
     padding:30px;
+
+    animation: legendaryGlow 2.5s infinite ease-in-out;
 
     box-shadow:
         0 0 20px #ff0000,
         0 0 50px rgba(255,0,0,.8),
         0 0 100px rgba(255,215,0,.5);
+}
+
+.host-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-150%;
+    width:50%;
+    height:100%;
+
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.25),
+        transparent
+    );
+
+    transform:skewX(-25deg);
+
+    animation: shine 5s infinite;
+}
+
+@keyframes shine{
+
+    0%{
+        left:-150%;
+    }
+
+    100%{
+        left:200%;
+    }
+}
+
+@keyframes legendaryGlow {
+
+    0%{
+        box-shadow:
+        0 0 20px #ff0000,
+        0 0 40px #ff0000,
+        0 0 80px #ffd700;
+    }
+
+    25%{
+        box-shadow:
+        0 0 30px #ff0000,
+        0 0 60px #ff3300,
+        0 0 120px #ffd700;
+    }
+
+    50%{
+        box-shadow:
+        0 0 50px #ffd700,
+        0 0 100px #ff0000,
+        0 0 160px #ffd700;
+    }
+
+    75%{
+        box-shadow:
+        0 0 30px #ff0000,
+        0 0 60px #ff3300,
+        0 0 120px #ffd700;
+    }
+
+    100%{
+        box-shadow:
+        0 0 20px #ff0000,
+        0 0 40px #ff0000,
+        0 0 80px #ffd700;
+    }
 }
 
 .host-card:hover{
@@ -96,16 +161,11 @@ body{
     display:flex;
     justify-content:space-between;
     align-items:center;
-
     background:#1a1a1a;
-
     padding:15px;
-
     border-left:5px solid #ff0000;
     border-radius:10px;
-
-    box-shadow:
-        0 0 10px rgba(255,0,0,.3);
+    box-shadow:0 0 10px rgba(255,0,0,.3);
 }
 
 .attribute span{
@@ -119,7 +179,6 @@ body{
 
 .rating-badge{
     position:absolute;
-
     top:20px;
     right:20px;
 
@@ -158,7 +217,6 @@ body{
 
 .back-btn{
     display:inline-block;
-
     margin-top:30px;
     width:fit-content;
 
