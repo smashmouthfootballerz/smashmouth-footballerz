@@ -367,3 +367,9 @@ footer{
     border-radius:15px;
     box-shadow:0 0 30px rgba(255,106,0,.4);
 }
+.bio-poster{
+    width:100%;
+    max-width:700px;
+    display:block;
+    margin:0 auto;
+}
