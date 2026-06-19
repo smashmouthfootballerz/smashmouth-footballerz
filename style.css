@@ -342,3 +342,17 @@ footer{
     background: #cc5200;
     transform: scale(1.05);
 }
+.host-link{
+    text-decoration:none;
+    color:inherit;
+    display:block;
+}
+
+.host-card{
+    cursor:pointer;
+    transition:transform .3s ease;
+}
+
+.host-card:hover{
+    transform:translateY(-8px);
+}
