@@ -1,1 +1,0 @@
-SMF Images Folder
