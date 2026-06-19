@@ -653,12 +653,14 @@ footer{
     position:relative;
     width:350px;
     height:500px;
-    margin-bottom:30px;
+    margin:0 auto 30px;
 }
 
 .pack-half{
     position:absolute;
-    width:350px;
+    width:100%;
+    height:100%;
+    object-fit:contain;
     top:0;
     left:0;
 }
@@ -671,11 +673,11 @@ footer{
     clip-path:polygon(50% 0,100% 0,100% 100%,50% 100%);
 }
 
-#pack-opening.active .left{
+#pack-opening.active .pack-half.left{
     animation:ripLeft 1.5s forwards;
 }
 
-#pack-opening.active .right{
+#pack-opening.active .pack-half.right{
     animation:ripRight 1.5s forwards;
 }
 
