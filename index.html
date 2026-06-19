@@ -139,6 +139,39 @@ SHOP MERCH
     <p>Fantasy Football Without The Fluff</p>
 
 </footer>
+<div id="pack-opening">
+    <div class="pack-flash"></div>
+    <div class="pack-text">PACK OPENING...</div>
+</div>
 
+<script>
+
+document.querySelectorAll('.pack-link').forEach(pack => {
+
+    pack.addEventListener('click', function(e){
+
+        e.preventDefault();
+
+        const destination = this.href;
+
+        const image = this.querySelector('.pack-image');
+
+        image.classList.add('opening');
+
+        document
+            .getElementById('pack-opening')
+            .classList.add('active');
+
+        setTimeout(() => {
+
+            window.location.href = destination;
+
+        }, 1800);
+
+    });
+
+});
+
+</script>
 </body>
 </html>
