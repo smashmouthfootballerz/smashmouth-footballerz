@@ -157,9 +157,16 @@ document.querySelectorAll('.open-pack').forEach(pack => {
         image.classList.add('opening');
 
         const overlay = document.getElementById('pack-opening');
-        overlay.classList.add('active');
 
-        const text = document.getElementById('opening-text');
+overlay.innerHTML = `
+    <div class="pack-flash"></div>
+    <img src="${image.src}" class="opening-pack">
+    <h1 id="opening-text">OPENING PACK...</h1>
+`;
+
+overlay.classList.add('active');
+
+const text = document.getElementById('opening-text');
 
        const imageSrc = image.src.toLowerCase();
 
