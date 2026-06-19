@@ -420,3 +420,171 @@ footer{
     50%{transform:translateY(-12px);}
     100%{transform:translateY(0);}
 }
+/* =========================
+   SMF PACK OPENING SYSTEM
+   ========================= */
+
+.pack-grid{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:40px;
+    max-width:1800px;
+    margin:60px auto;
+    padding:20px;
+}
+
+.pack-link{
+    display:block;
+    text-decoration:none;
+}
+
+.pack-image{
+    width:320px;
+    max-width:100%;
+    border-radius:20px;
+    cursor:pointer;
+    transition:all .3s ease;
+
+    animation:
+        floatPack 3s ease-in-out infinite;
+}
+
+/* FLOATING */
+
+@keyframes floatPack{
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* LEGENDARY PACK */
+
+.pack-link:nth-child(2) .pack-image{
+    animation:
+        floatPack 3s ease-in-out infinite,
+        glowLegendary 2s ease-in-out infinite;
+}
+
+@keyframes glowLegendary{
+    0%{
+        box-shadow:0 0 20px #ff0000;
+    }
+
+    50%{
+        box-shadow:
+        0 0 40px #ff0000,
+        0 0 80px #ff3300,
+        0 0 120px #ff6600;
+    }
+
+    100%{
+        box-shadow:0 0 20px #ff0000;
+    }
+}
+
+/* EPIC PACK */
+
+.pack-link:nth-child(1) .pack-image{
+    animation:
+        floatPack 3s ease-in-out infinite,
+        glowEpic 2s ease-in-out infinite;
+}
+
+@keyframes glowEpic{
+    0%{
+        box-shadow:0 0 20px #ff6600;
+    }
+
+    50%{
+        box-shadow:
+        0 0 40px #ff6600,
+        0 0 80px #ff9900;
+    }
+
+    100%{
+        box-shadow:0 0 20px #ff6600;
+    }
+}
+
+/* RARE PACK */
+
+.pack-link:nth-child(3) .pack-image{
+    animation:
+        floatPack 3s ease-in-out infinite,
+        glowRare 2s ease-in-out infinite;
+}
+
+@keyframes glowRare{
+    0%{
+        box-shadow:0 0 20px #8a2be2;
+    }
+
+    50%{
+        box-shadow:
+        0 0 40px #8a2be2,
+        0 0 80px #b266ff;
+    }
+
+    100%{
+        box-shadow:0 0 20px #8a2be2;
+    }
+}
+
+/* HOVER EFFECT */
+
+.pack-image:hover{
+    transform:scale(1.08);
+}
+
+/* PACK SHAKE */
+
+.pack-image:hover{
+    animation:
+        shakePack .15s infinite;
+}
+
+@keyframes shakePack{
+    0%{
+        transform:translateX(0);
+    }
+
+    25%{
+        transform:translateX(-2px);
+    }
+
+    50%{
+        transform:translateX(2px);
+    }
+
+    75%{
+        transform:translateX(-2px);
+    }
+
+    100%{
+        transform:translateX(0);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .pack-grid{
+        gap:25px;
+    }
+
+    .pack-image{
+        width:280px;
+    }
+
+}
