@@ -173,5 +173,51 @@ document.querySelectorAll('.pack-link').forEach(pack => {
 });
 
 </script>
+    </footer>
+
+<!-- PACK OPENING OVERLAY -->
+<div id="pack-opening">
+    <h1 id="opening-text">OPENING PACK...</h1>
+</div>
+
+<script>
+
+document.querySelectorAll('.open-pack').forEach(pack => {
+
+    pack.addEventListener('click', function(e){
+
+        e.preventDefault();
+
+        const destination = this.href;
+
+        const image = this.querySelector('.pack-image');
+
+        image.classList.add('opening');
+
+        const overlay = document.getElementById('pack-opening');
+        overlay.classList.add('active');
+
+        const text = document.getElementById('opening-text');
+
+        if(destination.includes('joe')){
+            text.innerHTML = 'OPENING EPIC PACK...';
+        }
+        else if(destination.includes('nic')){
+            text.innerHTML = 'OPENING LEGENDARY PACK...';
+        }
+        else if(destination.includes('chad')){
+            text.innerHTML = 'OPENING RARE DYNASTY PACK...';
+        }
+
+        setTimeout(() => {
+            window.location.href = destination;
+        }, 1800);
+
+    });
+
+});
+
+</script>
+
 </body>
 </html>
