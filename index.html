@@ -140,6 +140,7 @@ SHOP MERCH
     <div class="pack-wrapper">
 
         <img id="opening-pack-left" class="pack-half left" src="">
+
         <img id="opening-pack-right" class="pack-half right" src="">
 
     </div>
@@ -159,9 +160,11 @@ document.querySelectorAll('.open-pack').forEach(pack => {
         const destination = this.href;
 
         const image = this.querySelector('.pack-image');
-
-        document.getElementById('opening-pack-image').src = image.src;
-
+        
+        document.getElementById('opening-pack-left').src = image.src;
+        document.getElementById('opening-pack-right').src = image.src;
+        
+        image.classList.add('opening');
         const overlay = document.getElementById('pack-opening');
 
         overlay.classList.add('active');
