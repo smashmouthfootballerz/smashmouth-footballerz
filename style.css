@@ -392,10 +392,17 @@ footer{
 }
 
 .pack-image{
-    width:100%;
+    width:220px;
+    max-width:220px;
+    height:auto;
+    display:block;
+
     border-radius:20px;
-    transition:.4s ease;
     cursor:pointer;
+
+    animation:floatPack 3s ease-in-out infinite;
+    transition:.3s ease;
+}
     animation:packFloat 3s ease-in-out infinite;
 }
 
@@ -441,11 +448,17 @@ footer{
 }
 
 .pack-image{
-    width:320px;
-    max-width:100%;
+    width:220px;
+    max-width:220px;
+    height:auto;
+    display:block;
+
     border-radius:20px;
     cursor:pointer;
-    transition:all .3s ease;
+
+    animation:floatPack 3s ease-in-out infinite;
+    transition:.3s ease;
+}
 
     animation:
         floatPack 3s ease-in-out infinite;
