@@ -732,3 +732,29 @@ footer{
     50%{opacity:.8;}
     100%{opacity:0;}
 }
+.pack-image.opening{
+    animation:packRip .15s infinite;
+}
+
+@keyframes packRip{
+    0%{
+        transform:scale(1) rotate(0deg);
+    }
+
+    25%{
+        transform:scale(1.05) rotate(-4deg);
+    }
+
+    50%{
+        transform:scale(1.1) rotate(4deg);
+    }
+
+    75%{
+        transform:scale(1.05) rotate(-4deg);
+    }
+
+    100%{
+        transform:scale(1.2);
+        opacity:0;
+    }
+}
