@@ -356,3 +356,14 @@ footer{
 .host-card:hover{
     transform:translateY(-8px);
 }
+.host-bio-poster{
+    text-align:center;
+    padding:40px 20px;
+}
+
+.bio-poster{
+    width:100%;
+    max-width:900px;
+    border-radius:15px;
+    box-shadow:0 0 30px rgba(255,106,0,.4);
+}
