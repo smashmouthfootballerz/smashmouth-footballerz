@@ -139,49 +139,12 @@ SHOP MERCH
     <p>Fantasy Football Without The Fluff</p>
 
 </footer>
-<div id="pack-opening">
+    <div id="pack-opening">
     <div class="pack-flash"></div>
-    <div class="pack-text">PACK OPENING...</div>
-</div>
-
-<script>
-
-document.querySelectorAll('.pack-link').forEach(pack => {
-
-    pack.addEventListener('click', function(e){
-
-        e.preventDefault();
-
-        const destination = this.href;
-
-        const image = this.querySelector('.pack-image');
-
-        image.classList.add('opening');
-
-        document
-            .getElementById('pack-opening')
-            .classList.add('active');
-
-        setTimeout(() => {
-
-            window.location.href = destination;
-
-        }, 1800);
-
-    });
-
-});
-
-</script>
-    </footer>
-
-<!-- PACK OPENING OVERLAY -->
-<div id="pack-opening">
     <h1 id="opening-text">OPENING PACK...</h1>
 </div>
-
+    
 <script>
-
 document.querySelectorAll('.open-pack').forEach(pack => {
 
     pack.addEventListener('click', function(e){
@@ -189,7 +152,6 @@ document.querySelectorAll('.open-pack').forEach(pack => {
         e.preventDefault();
 
         const destination = this.href;
-
         const image = this.querySelector('.pack-image');
 
         image.classList.add('opening');
@@ -201,11 +163,9 @@ document.querySelectorAll('.open-pack').forEach(pack => {
 
         if(destination.includes('joe')){
             text.innerHTML = 'OPENING EPIC PACK...';
-        }
-        else if(destination.includes('nic')){
+        } else if(destination.includes('nic')){
             text.innerHTML = 'OPENING LEGENDARY PACK...';
-        }
-        else if(destination.includes('chad')){
+        } else if(destination.includes('chad')){
             text.innerHTML = 'OPENING RARE DYNASTY PACK...';
         }
 
@@ -216,8 +176,4 @@ document.querySelectorAll('.open-pack').forEach(pack => {
     });
 
 });
-
 </script>
-
-</body>
-</html>
