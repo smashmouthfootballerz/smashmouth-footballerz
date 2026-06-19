@@ -11,31 +11,25 @@
 body{
     margin:0;
     padding:30px;
-    background:
-    radial-gradient(circle at center,#0d001f 0%,#000 70%);
+    background:radial-gradient(circle at center,#0d001f 0%,#000000 70%);
     color:white;
-    font-family:Arial,sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 .host-card{
     position:relative;
     max-width:1400px;
     margin:40px auto;
-
     background:#111;
-
     border:4px solid #8a2be2;
     border-radius:25px;
-
     overflow:hidden;
-
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:30px;
-
     padding:30px;
 
-    animation: dynastyGlow 4s infinite;
+    animation: dynastyGlow 3s infinite ease-in-out;
 
     box-shadow:
         0 0 20px #8a2be2,
@@ -43,27 +37,58 @@ body{
         0 0 100px rgba(0,191,255,.4);
 }
 
+.host-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-150%;
+    width:50%;
+    height:100%;
+
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.25),
+        transparent
+    );
+
+    transform:skewX(-25deg);
+
+    animation: shine 5s infinite;
+}
+
+@keyframes shine{
+
+    0%{
+        left:-150%;
+    }
+
+    100%{
+        left:200%;
+    }
+}
+
 @keyframes dynastyGlow {
 
     0%{
         box-shadow:
         0 0 20px #8a2be2,
-        0 0 50px rgba(138,43,226,.8),
-        0 0 100px rgba(0,191,255,.4);
+        0 0 40px #8a2be2,
+        0 0 80px #00bfff;
     }
 
     50%{
         box-shadow:
-        0 0 30px #00bfff,
-        0 0 70px rgba(138,43,226,.9),
-        0 0 120px rgba(0,191,255,.6);
+        0 0 40px #00bfff,
+        0 0 80px #8a2be2,
+        0 0 140px #00bfff;
     }
 
     100%{
         box-shadow:
         0 0 20px #8a2be2,
-        0 0 50px rgba(138,43,226,.8),
-        0 0 100px rgba(0,191,255,.4);
+        0 0 40px #8a2be2,
+        0 0 80px #00bfff;
     }
 }
 
@@ -122,16 +147,11 @@ body{
     display:flex;
     justify-content:space-between;
     align-items:center;
-
     background:#1a1a1a;
-
     padding:15px;
-
     border-left:5px solid #8a2be2;
     border-radius:10px;
-
-    box-shadow:
-        0 0 10px rgba(138,43,226,.3);
+    box-shadow:0 0 10px rgba(138,43,226,.3);
 }
 
 .attribute span{
@@ -145,7 +165,6 @@ body{
 
 .rating-badge{
     position:absolute;
-
     top:20px;
     right:20px;
 
@@ -184,7 +203,6 @@ body{
 
 .back-btn{
     display:inline-block;
-
     margin-top:30px;
     width:fit-content;
 
