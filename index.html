@@ -159,7 +159,7 @@ document.querySelectorAll('.open-pack').forEach(pack => {
         const destination = this.href;
 
         const image = this.querySelector('.pack-image');
-        
+        document.getElementById('shakeSound').play();
         document.getElementById('opening-pack-left').src = image.src;
         document.getElementById('opening-pack-right').src = image.src;
         
@@ -167,7 +167,17 @@ document.querySelectorAll('.open-pack').forEach(pack => {
         const overlay = document.getElementById('pack-opening');
 
         overlay.classList.add('active');
+        setTimeout(() => {
+           document.getElementById('ripSound').play();
+        }, 600);
 
+        setTimeout(() => {
+          document.getElementById('boomSound').play();
+        }, 1000);
+
+        setTimeout(() => {
+          document.getElementById('crowdSound').play();
+        }, 1400);
         const text = document.getElementById('opening-text');
 
         const imageSrc = image.src.toLowerCase();
