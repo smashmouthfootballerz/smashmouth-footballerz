@@ -866,3 +866,7 @@ transform:scale(1.05);
     border-radius: 15px;
     background: #000;
 }
+.pack-image{
+    width:180px !important;
+    max-width:180px !important;
+}
