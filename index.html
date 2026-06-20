@@ -167,13 +167,14 @@ document.querySelectorAll('.open-pack').forEach(pack => {
 
         const destination = this.href;
         const image = this.querySelector('.pack-image');
-
         const overlay = document.getElementById('pack-opening');
+        const text = document.getElementById('opening-text');
 
         document.getElementById('player-card-image').src = image.src;
         document.getElementById('opening-pack-left').src = image.src;
         document.getElementById('opening-pack-right').src = image.src;
 
+        overlay.classList.remove('epic','legendary','dynasty');
         overlay.classList.add('active');
 
         document.getElementById('shakeSound').play();
@@ -190,46 +191,30 @@ document.querySelectorAll('.open-pack').forEach(pack => {
             document.getElementById('crowdSound').play();
         }, 1400);
 
-        const text = document.getElementById('opening-text');
+        const imageSrc = image.src.toLowerCase();
 
-     const imageSrc = image.src.toLowerCase();
+        if(imageSrc.includes('joe-pack')){
+            text.innerHTML = 'OPENING EPIC PACK...';
+            overlay.classList.add('epic');
+        }
+        else if(imageSrc.includes('nic-pack')){
+            text.innerHTML = 'OPENING LEGENDARY PACK...';
+            overlay.classList.add('legendary');
+        }
+        else{
+            text.innerHTML = 'OPENING DYNASTY PACK...';
+            overlay.classList.add('dynasty');
+        }
 
-overlay.classList.remove(
-    'epic',
-    'legendary',
-    'dynasty'
-);
+        setTimeout(() => {
 
-if(imageSrc.includes('joe-pack')){
-    text.innerHTML = 'OPENING EPIC PACK...';
-    overlay.classList.add('epic');
-}
-else if(imageSrc.includes('nic-pack')){
-    text.innerHTML = 'OPENING LEGENDARY PACK...';
-    overlay.classList.add('legendary');
-}
-else{
-    text.innerHTML = 'OPENING DYNASTY PACK...';
-    overlay.classList.add('dynasty');
-}
+            document.getElementById('player-card')
+                .classList.add('show-card');
 
-setTimeout(() => {
+            document.getElementById('enter-bio')
+                .style.display = 'block';
 
-    document.getElementById('player-card')
-        .classList.add('show-card');
-
-    document.getElementById('enter-bio')
-        .style.display = 'block';
-
-}, 4500);
-
-    document.getElementById('player-card')
-        .classList.add('show-card');
-
-    document.getElementById('enter-bio')
-        .style.display = 'block';
-
-}, 4500);
+        }, 4500);
 
         document.getElementById('enter-bio').onclick = () => {
             window.location.href = destination;
@@ -238,6 +223,8 @@ setTimeout(() => {
     });
 
 });
+
+</script>
 
 </script>
 
