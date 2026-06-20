@@ -194,8 +194,9 @@ document.querySelectorAll('.open-pack').forEach(pack => {
 
         const imageSrc = image.src.toLowerCase();
 
-        if(imageSrc.includes('joe-pack')){
-            text.innerHTML = 'OPENING EPIC PACK...';
+        if(imageSrc.includes('nic-pack')){
+    overlay.classList.add('legendary');
+}
         }
         else if(imageSrc.includes('nic-pack')){
             text.innerHTML = 'OPENING LEGENDARY PACK...';
