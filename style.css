@@ -812,3 +812,26 @@ transform:scale(1.05);
         opacity:.8;
     }
 }
+.show-card img{
+    animation:pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.05);
+    }
+    100%{
+        transform:scale(1);
+    }
+}.epic{
+    box-shadow:0 0 50px orange;
+}.legendary{
+    box-shadow:0 0 80px gold;
+}.dynasty{
+    box-shadow:0 0 80px #8a2be2;
+}.legendary .pack-flash{
+    background:gold;
+}
