@@ -238,69 +238,6 @@ document.querySelectorAll('.open-pack').forEach(pack => {
 
 <audio id="shakeSound" src="shake.mp3"></audio> <audio id="ripSound" src="rip.mp3"></audio> <audio id="boomSound" src="boom.mp3"></audio> <audio id="crowdSound" src="crowd.mp3"></audio>
 
-
-<script>
-
-document.querySelectorAll('.open-pack').forEach(pack => {
-
-    pack.addEventListener('click', function(e){
-
-        e.preventDefault();
-
-        const destination = this.href;
-        const image = this.querySelector('.pack-image');
-
-        const overlay = document.getElementById('pack-opening');
-        const text = document.getElementById('opening-text');
-
-        document.getElementById('opening-pack-left').src = image.src;
-        document.getElementById('opening-pack-right').src = image.src;
-        document.getElementById('player-card-image').src = image.src;
-
-        overlay.classList.add('active');
-
-        document.getElementById('shakeSound').play();
-
-        setTimeout(() => {
-            document.getElementById('ripSound').play();
-        }, 600);
-
-        setTimeout(() => {
-            document.getElementById('boomSound').play();
-        }, 1200);
-
-        setTimeout(() => {
-            document.getElementById('crowdSound').play();
-        }, 1800);
-
-        const imageSrc = image.src.toLowerCase();
-
-        if(imageSrc.includes('joe-pack')){
-            text.innerHTML = 'EPIC PACK!';
-        }
-        else if(imageSrc.includes('nic-pack')){
-            text.innerHTML = 'LEGENDARY PACK!';
-        }
-        else{
-            text.innerHTML = 'DYNASTY PACK!';
-        }
-
-        setTimeout(() => {
-
-            const card = document.getElementById('player-card');
-
-            card.classList.add('show-card');
-
-            document.getElementById('enter-bio').onclick = () => {
-                window.location.href = destination;
-            };
-
-        }, 3500);
-
-    });
-
-});
-
 </script>
 </body>
 </html>
