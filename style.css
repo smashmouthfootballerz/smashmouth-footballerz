@@ -18,7 +18,7 @@ body{
 /* NAVIGATION */
 
 .navbar{
-    position:fixed;
+    position:absolute;
     top:0;
     left:0;
     width:100%;
@@ -30,9 +30,7 @@ body{
 
     padding:18px 50px;
 
-    background:rgba(0,0,0,.92);
-
-    backdrop-filter:blur(10px);
+    background:transparent;
 }
 
 .logo-brand{
