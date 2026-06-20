@@ -192,23 +192,36 @@ document.querySelectorAll('.open-pack').forEach(pack => {
 
         const text = document.getElementById('opening-text');
 
-        const imageSrc = image.src.toLowerCase();
+     const imageSrc = image.src.toLowerCase();
 
-       if(imageSrc.includes('joe-pack')){
+overlay.classList.remove(
+    'epic',
+    'legendary',
+    'dynasty'
+);
+
+if(imageSrc.includes('joe-pack')){
+    text.innerHTML = 'OPENING EPIC PACK...';
     overlay.classList.add('epic');
 }
 else if(imageSrc.includes('nic-pack')){
+    text.innerHTML = 'OPENING LEGENDARY PACK...';
     overlay.classList.add('legendary');
 }
 else{
+    text.innerHTML = 'OPENING DYNASTY PACK...';
     overlay.classList.add('dynasty');
 }
-    text.innerHTML = 'OPENING DYNASTY PACK...';
-}
-
-// ADD EFFECTS HERE
 
 setTimeout(() => {
+
+    document.getElementById('player-card')
+        .classList.add('show-card');
+
+    document.getElementById('enter-bio')
+        .style.display = 'block';
+
+}, 4500);
 
     document.getElementById('player-card')
         .classList.add('show-card');
