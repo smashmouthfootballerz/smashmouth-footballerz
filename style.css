@@ -693,40 +693,53 @@ opacity:0;
 
 /* CARD REVEAL */
 
+/* CARD REVEAL */
+
 #player-card{
-position:absolute;
-opacity:0;
-transform:
-translateY(400px)
-rotateY(180deg);
+    position:absolute;
+    z-index:100;
 
-```
-transition:all 1.2s ease;
-z-index:100;
-```
+    opacity:0;
 
+    transform:
+        translateY(400px)
+        rotateY(180deg);
+
+    transition:all 1.2s ease;
 }
 
 .show-card{
-opacity:1 !important;
+    opacity:1 !important;
 
-```
-transform:
-    translateY(0)
-    rotateY(0deg) !important;
-```
-
+    transform:
+        translateY(0)
+        rotateY(0deg) !important;
 }
 
 #player-card img{
-width:350px;
-border-radius:20px;
+    width:350px;
+    border-radius:20px;
 
-```
-box-shadow:
-0 0 60px #ff6600;
-```
+    box-shadow:
+        0 0 30px #ff6600,
+        0 0 80px #ff3300;
+}
 
+#enter-bio{
+    display:none;
+
+    margin-top:20px;
+    padding:15px 30px;
+
+    border:none;
+    border-radius:10px;
+
+    background:#ff6600;
+    color:white;
+
+    font-size:1.1rem;
+    font-weight:bold;
+    cursor:pointer;
 }
 
 /* TEXT */
