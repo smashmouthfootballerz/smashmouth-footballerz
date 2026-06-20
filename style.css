@@ -78,55 +78,32 @@ nav a:hover{
     background-color:#000;
 }
 
-.hero-content{
-    top:52%;
+.hero{
+    position:relative;
+    width:100%;
+    overflow:hidden;
 }
+
+.hero-banner{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
 .hero-overlay{
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,.45);
+    background:rgba(0,0,0,.25);
 }
 
 .hero-content{
     position:absolute;
-    top:38%;
+    top:50%;
     left:50%;
     transform:translate(-50%,-50%);
     text-align:center;
-    width:100%;
+    width:90%;
     z-index:10;
-}
-
-.hero-content h1{
-    font-size:2.0rem;
-    font-weight:800;
-    color:#fff;
-    line-height:1.1;
-    margin-bottom:25px;
-    text-shadow:0 4px 15px rgba(0,0,0,.8);
-}
-
-.hero-content p{
-    font-size:2rem;
-    color:#fff;
-    margin-bottom:35px;
-}
-
-.hero-content .btn{
-    display:inline-block;
-    background:#ff6a13;
-    color:#fff;
-    padding:18px 45px;
-    border-radius:10px;
-    font-weight:700;
-    text-decoration:none;
-    transition:.3s;
-}
-
-.hero-content .btn:hover{
-    background:#ff7e2f;
-    transform:translateY(-3px);
-}
 }
 
 /* HOSTS */
