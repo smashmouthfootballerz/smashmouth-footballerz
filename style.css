@@ -105,17 +105,17 @@ nav a:hover{
 .hosts-section{
     padding:80px 60px;
 
-    background:
+    background-image:
         linear-gradient(
-            rgba(0,0,0,.75),
-            rgba(0,0,0,.75)
+            rgba(0,0,0,.55),
+            rgba(0,0,0,.80)
         ),
-        url('new-hero.jpg');
+        url('football-field.png');
 
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
-}
+}}
 
 .hosts-section h2{
 
