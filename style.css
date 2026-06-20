@@ -103,19 +103,20 @@ nav a:hover{
 /* HOSTS */
 
 .hosts-section{
+    position:relative;
     padding:80px 60px;
 
     background-image:
         linear-gradient(
-            rgba(0,0,0,.55),
-            rgba(0,0,0,.80)
+            rgba(0,0,0,.35),
+            rgba(0,0,0,.55)
         ),
-        url('./football-field.png')
+        url('football-field.png');
 
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
-}}
+}
 .hosts-section::before{
     content:'';
     position:absolute;
