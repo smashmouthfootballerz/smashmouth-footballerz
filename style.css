@@ -103,10 +103,18 @@ nav a:hover{
 /* HOSTS */
 
 .hosts-section{
-
     padding:80px 60px;
 
-    background:#000;
+    background:
+        linear-gradient(
+            rgba(0,0,0,.80),
+            rgba(0,0,0,.80)
+        ),
+        url('your-background-image.jpg');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 }
 
 .hosts-section h2{
