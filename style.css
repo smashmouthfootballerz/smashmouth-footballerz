@@ -693,28 +693,6 @@ opacity:0;
 }
 
 /* CARD REVEAL */
-#player-card{
-    position:absolute;
-    z-index:100;
-
-    opacity:0;
-
-    transform:
-        translateY(400px)
-        rotateY(180deg);
-
-    transition:all 1.2s ease;
-}
-
-.show-card{
-    opacity:1 !important;
-
-    transform:
-        translateY(0)
-        rotateY(0deg) !important;
-}
-
-/* CARD REVEAL */
 
 #player-card{
     position:absolute;
