@@ -782,3 +782,28 @@ footer{
     20%{opacity:.9;}
     100%{opacity:0;}
 }
+#enter-bio{
+    display:none;
+    padding:15px 35px;
+    font-size:20px;
+    font-weight:bold;
+    background:linear-gradient(45deg,#ff6600,#ff9900);
+    color:white;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    box-shadow:0 0 30px #ff6600;
+}
+
+#player-card{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    z-index:20;
+}
+
+#player-card-image{
+    width:350px;
+    max-width:80vw;
+}
