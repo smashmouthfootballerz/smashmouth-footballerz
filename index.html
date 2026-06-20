@@ -137,14 +137,33 @@ SHOP MERCH
 
     <div class="pack-flash"></div>
 
-<div class="energy-burst"></div>
+    <div class="smoke smoke1"></div>
+    <div class="smoke smoke2"></div>
+    <footer>
+...
+</footer>
 
-<div class="pack-wrapper">
-    <img id="opening-pack-left" class="pack-half left" src="">
-    <img id="opening-pack-right" class="pack-half right" src="">
-</div>
+<div id="pack-opening">
 
-<h1 id="opening-text">OPENING PACK...</h1>
+    <div class="pack-flash"></div>
+
+    <div class="smoke smoke1"></div>
+    <div class="smoke smoke2"></div>
+    <div class="smoke smoke3"></div>
+
+    <div class="stadium-lights"></div>
+
+    <div id="player-card">
+        <img id="player-card-image" src="">
+        <button id="enter-bio">VIEW PLAYER BIO</button>
+    </div>
+
+    <div class="pack-wrapper">
+        <img id="opening-pack-left" class="pack-half left" src="">
+        <img id="opening-pack-right" class="pack-half right" src="">
+    </div>
+
+    <h1 id="opening-text">OPENING PACK...</h1>
 
 </div>
 
@@ -159,6 +178,8 @@ document.querySelectorAll('.open-pack').forEach(pack => {
         const destination = this.href;
 
         const image = this.querySelector('.pack-image');
+        
+        document.getElementById('player-card-image').src = image.src;
         document.getElementById('shakeSound').play();
         document.getElementById('opening-pack-left').src = image.src;
         document.getElementById('opening-pack-right').src = image.src;
@@ -192,11 +213,17 @@ document.querySelectorAll('.open-pack').forEach(pack => {
             text.innerHTML = 'OPENING RARE DYNASTY PACK...';
         }
 
-        setTimeout(() => {
-            window.location.href = destination;
-        }, 1800);
+      document.getElementById('player-card-image').src = image.src;
 
-    });
+setTimeout(() => {
+
+    document.getElementById('enter-bio').style.display = 'block';
+
+}, 5500);
+
+document.getElementById('enter-bio').onclick = () => {
+    window.location.href = destination;
+};
 
 });
 
