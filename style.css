@@ -72,12 +72,14 @@ nav a:hover{
 
 .hero{
     position:relative;
-    width:100%;
-    height:56.25vw;   /* 16:9 ratio */
-    max-height:1000px;
 
     background:url('new-hero.jpg') center top no-repeat;
-    background-size:contain;
+    background-size:100% auto;
+
+    height:50vw;
+    min-height:500px;
+    max-height:800px;
+
     background-color:#000;
 }
 .hero-overlay{
