@@ -110,7 +110,7 @@ nav a:hover{
             rgba(0,0,0,.55),
             rgba(0,0,0,.80)
         ),
-        url('football-field.png');
+        url('./football-field.png')
 
     background-size:cover;
     background-position:center;
