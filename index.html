@@ -143,6 +143,8 @@ SHOP MERCH
 ...
 </footer>
 
+<!-- PACK OPENING OVERLAY -->
+
 <div id="pack-opening">
 
     <div class="pack-flash"></div>
@@ -153,19 +155,24 @@ SHOP MERCH
 
     <div class="stadium-lights"></div>
 
-    <div id="player-card">
-        <img id="player-card-image" src="">
-        <button id="enter-bio">VIEW PLAYER BIO</button>
-    </div>
-
     <div class="pack-wrapper">
         <img id="opening-pack-left" class="pack-half left" src="">
         <img id="opening-pack-right" class="pack-half right" src="">
     </div>
 
+    <div id="player-card">
+        <img id="player-card-image" src="">
+        <button id="enter-bio">VIEW PLAYER BIO</button>
+    </div>
+
     <h1 id="opening-text">OPENING PACK...</h1>
 
 </div>
+
+<audio id="shakeSound" src="shake.mp3"></audio>
+<audio id="ripSound" src="rip.mp3"></audio>
+<audio id="boomSound" src="boom.mp3"></audio>
+<audio id="crowdSound" src="crowd.mp3"></audio>
 
 <script>
 
@@ -174,69 +181,61 @@ document.querySelectorAll('.open-pack').forEach(pack => {
     pack.addEventListener('click', function(e){
 
         e.preventDefault();
-        
-        alert("PACK CLICKED");
 
         const destination = this.href;
-
         const image = this.querySelector('.pack-image');
-        
-        document.getElementById('player-card-image').src = image.src;
-        document.getElementById('shakeSound').play();
+
+        const overlay = document.getElementById('pack-opening');
+        const text = document.getElementById('opening-text');
+
         document.getElementById('opening-pack-left').src = image.src;
         document.getElementById('opening-pack-right').src = image.src;
-        
-        image.classList.add('opening');
-        const overlay = document.getElementById('pack-opening');
+        document.getElementById('player-card-image').src = image.src;
 
         overlay.classList.add('active');
+
+        document.getElementById('shakeSound').play();
+
         setTimeout(() => {
-           document.getElementById('ripSound').play();
+            document.getElementById('ripSound').play();
         }, 600);
 
         setTimeout(() => {
-          document.getElementById('boomSound').play();
-        }, 1000);
+            document.getElementById('boomSound').play();
+        }, 1200);
 
         setTimeout(() => {
-          document.getElementById('crowdSound').play();
-        }, 1400);
-        const text = document.getElementById('opening-text');
+            document.getElementById('crowdSound').play();
+        }, 1800);
 
         const imageSrc = image.src.toLowerCase();
 
         if(imageSrc.includes('joe-pack')){
-            text.innerHTML = 'OPENING EPIC PACK...';
+            text.innerHTML = 'EPIC PACK!';
         }
         else if(imageSrc.includes('nic-pack')){
-            text.innerHTML = 'OPENING LEGENDARY PACK...';
+            text.innerHTML = 'LEGENDARY PACK!';
         }
-        else if(imageSrc.includes('chad-pack')){
-            text.innerHTML = 'OPENING RARE DYNASTY PACK...';
+        else{
+            text.innerHTML = 'DYNASTY PACK!';
         }
 
-      document.getElementById('player-card-image').src = image.src;
+        setTimeout(() => {
 
-setTimeout(() => {
+            const card = document.getElementById('player-card');
 
-    document.getElementById('player-card').style.opacity = '1';
-    document.getElementById('player-card').style.transform =
-        'translateY(0) rotateY(0deg)';
+            card.classList.add('show-card');
 
-    document.getElementById('enter-bio').style.display = 'block';
+            document.getElementById('enter-bio').onclick = () => {
+                window.location.href = destination;
+            };
 
-}, 3000);
+        }, 3500);
 
-document.getElementById('enter-bio').onclick = () => {
-    window.location.href = destination;
-};
+    });
 
 });
 
 </script>
-<audio id="shakeSound" src="shake.mp3"></audio>
-<audio id="ripSound" src="rip.mp3"></audio>
-<audio id="boomSound" src="boom.mp3"></audio>
-<audio id="crowdSound" src="crowd.mp3"></audio>
 </body>
 </html>
