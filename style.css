@@ -252,7 +252,6 @@ nav a:hover{
     border:none;
     border-radius:12px;
 }
-}
 
 .video-card{
     border-radius:20px;
@@ -277,7 +276,6 @@ nav a:hover{
     .video-card iframe{
         height:220px;
     }
-}
 /* FOOTER */
 
 footer{
@@ -831,7 +829,20 @@ transform:scale(1.05);
 /* LATEST VIDEOS */
 
 .youtube-section {
-    padding: 60px 40px;
+    padding:80px 60px;
+
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,.75),
+            rgba(0,0,0,.90)
+        ),
+        url('stadium-lights.png');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    position:relative;
 }
 
 .youtube-section h2 {
