@@ -198,29 +198,33 @@ nav a:hover{
     position:relative;
 }
 
-.ranking-card {
-    background: rgba(0,0,0,0.85);
-    border-radius: 20px;
-
-    min-height: 170px;
-    padding: 20px;
-
-    text-decoration: none;
-    color: white;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 1.5rem;
-    font-weight: bold;
-
-    transition: 0.3s ease;
+.rankings-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:25px;
+    max-width:1400px;
+    margin:auto;
 }
 
-.ranking-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 0 25px rgba(255,102,0,.7);
+.ranking-card{
+    background:rgba(0,0,0,.85);
+    border-radius:20px;
+    min-height:170px;
+    padding:20px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+    text-decoration:none;
+
+    transition:.3s;
+}
+
+.ranking-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 25px rgba(255,102,0,.7);
 }
 
 /* VIDEOS */
