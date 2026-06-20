@@ -107,15 +107,14 @@ nav a:hover{
 
     background:
         linear-gradient(
-            rgba(0,0,0,.80),
-            rgba(0,0,0,.80)
+            rgba(0,0,0,.75),
+            rgba(0,0,0,.75)
         ),
-        url('your-background-image.jpg');
+        url('football-field.jpg');
 
     background-size:cover;
     background-position:center;
-    background-repeat:no-repeat;
-}
+}}
 
 .hosts-section h2{
 
