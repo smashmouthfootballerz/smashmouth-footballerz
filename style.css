@@ -732,7 +732,11 @@ opacity:0;
         0 0 30px #ff6600,
         0 0 80px #ff3300;
 }
-
+#player-card-image{
+    width:350px;
+    max-width:80vw;
+    display:block;
+}
 #enter-bio{
     display:none;
 
