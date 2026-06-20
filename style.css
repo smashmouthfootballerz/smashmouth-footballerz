@@ -116,7 +116,18 @@ nav a:hover{
     background-position:center;
     background-repeat:no-repeat;
 }}
+.hosts-section::before{
+    content:'';
+    position:absolute;
+    inset:0;
 
+    background:
+        radial-gradient(circle at top center,
+        rgba(255,255,255,.20),
+        transparent 50%);
+
+    pointer-events:none;
+}
 .hosts-section h2{
 
     text-align:center;
