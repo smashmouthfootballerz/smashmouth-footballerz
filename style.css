@@ -511,438 +511,261 @@ footer{
    PACK OPENING OVERLAY
 ========================================== */
 
+/* ===================================
+SMF ULTIMATE PACK OPENER
+=================================== */
+
+.pack-grid{
+display:flex;
+justify-content:center;
+gap:60px;
+flex-wrap:wrap;
+margin:60px auto;
+}
+
+.pack-image{
+width:250px;
+border-radius:20px;
+cursor:pointer;
+transition:.3s;
+}
+
+/* FLOATING PACKS */
+
+.pack-link:nth-child(1) .pack-image{
+animation:floatPack 3s infinite ease-in-out,
+epicGlow 2s infinite;
+}
+
+.pack-link:nth-child(2) .pack-image{
+animation:floatPack 3s infinite ease-in-out,
+legendaryGlow 2s infinite;
+}
+
+.pack-link:nth-child(3) .pack-image{
+animation:floatPack 3s infinite ease-in-out,
+dynastyGlow 2s infinite;
+}
+
+@keyframes floatPack{
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
+}
+
+@keyframes epicGlow{
+0%,100%{box-shadow:0 0 20px #ff6600;}
+50%{box-shadow:0 0 60px #ff6600;}
+}
+
+@keyframes legendaryGlow{
+0%,100%{box-shadow:0 0 20px #ff0000;}
+50%{
+box-shadow:
+0 0 50px #ff0000,
+0 0 100px #ff6600;
+}
+}
+
+@keyframes dynastyGlow{
+0%,100%{box-shadow:0 0 20px #8a2be2;}
+50%{
+box-shadow:
+0 0 50px #8a2be2,
+0 0 100px #c77dff;
+}
+}
+
+/* ===================================
+OVERLAY
+=================================== */
+
 #pack-opening{
-    position:fixed;
-    inset:0;
-    background:#000;
-    display:none;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    z-index:99999;
-    overflow:hidden;
+position:fixed;
+inset:0;
+background:#000;
+display:none;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+z-index:99999;
+overflow:hidden;
 }
 
 #pack-opening.active{
-    display:flex;
-}
-
-.pack-flash{
-    position:absolute;
-    inset:0;
-    background:white;
-    opacity:0;
-    pointer-events:none;
-    z-index:1;
-    animation:flashBurst .5s ease;
-}
-
-@keyframes flashBurst{
-    0%{
-        opacity:0;
-    }
-
-    15%{
-        opacity:.4;
-    }
-
-    100%{
-        opacity:0;
-    }
-}
-
-/* PACK IMAGE INSIDE OPENING SCREEN */
-
-./* ULTIMATE PACK RIP */
-
-.pack-wrapper{
-    position:relative;
-    width:350px;
-    height:500px;
-    margin:0 auto;
-}
-
-.pack-half{
-    position:absolute;
-    width:100%;
-    height:100%;
-    object-fit:contain;
-    top:0;
-    left:0;
-    z-index:10;
-}
-
-.pack-half.left{
-    clip-path:polygon(0 0,50% 0,50% 100%,0 100%);
-}
-
-.pack-half.right{
-    clip-path:polygon(50% 0,100% 0,100% 100%,50% 100%);
-}
-
-#pack-opening.active .left{
-    animation:ripLeft 1.4s forwards;
-}
-
-#pack-opening.active .right{
-    animation:ripRight 1.4s forwards;
-}
-
-@keyframes ripLeft{
-    0%{
-        transform:translateX(0) rotate(0);
-    }
-
-    100%{
-        transform:
-        translateX(-700px)
-        rotate(-45deg)
-        scale(1.4);
-        opacity:0;
-    }
-}
-
-@keyframes ripRight{
-    0%{
-        transform:translateX(0) rotate(0);
-    }
-
-    100%{
-        transform:
-        translateX(700px)
-        rotate(45deg)
-        scale(1.4);
-        opacity:0;
-    }
+display:flex;
 }
 
 /* FLASH */
 
 .pack-flash{
-    position:absolute;
-    inset:0;
-    background:white;
-    opacity:0;
-    z-index:20;
+position:absolute;
+inset:0;
+background:white;
+opacity:0;
 }
 
 #pack-opening.active .pack-flash{
-    animation:megaFlash .6s forwards;
+animation:flashBurst .8s forwards;
 }
 
-@keyframes megaFlash{
-    0%{opacity:0;}
-    20%{opacity:1;}
-    100%{opacity:0;}
+@keyframes flashBurst{
+0%{opacity:0;}
+20%{opacity:1;}
+100%{opacity:0;}
 }
 
-/* ENERGY BURST */
+/* SMOKE */
 
-.energy-burst{
-    position:absolute;
-    width:700px;
-    height:700px;
-    border-radius:50%;
-    background:
-    radial-gradient(circle,
-    #ff9900 0%,
-    #ff6600 25%,
-    rgba(255,102,0,.3) 50%,
-    transparent 75%);
-    opacity:0;
-    z-index:15;
+.smoke{
+position:absolute;
+width:600px;
+height:600px;
+border-radius:50%;
+background:rgba(255,255,255,.08);
+filter:blur(80px);
+opacity:0;
 }
 
-#pack-opening.active .energy-burst{
-    animation:burst 1.2s forwards;
+#pack-opening.active .smoke{
+animation:smokeRise 3s forwards;
 }
 
-@keyframes burst{
-    0%{
-        transform:scale(.1);
-        opacity:1;
-    }
+@keyframes smokeRise{
+from{
+opacity:0;
+transform:scale(.2);
+}
+to{
+opacity:.7;
+transform:scale(2);
+}
+}
 
-    100%{
-        transform:scale(3);
-        opacity:0;
-    }
+/* PACK RIP */
+
+.pack-wrapper{
+position:relative;
+width:350px;
+height:500px;
+}
+
+.pack-half{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:contain;
+}
+
+.left{
+clip-path:polygon(0 0,50% 0,50% 100%,0 100%);
+}
+
+.right{
+clip-path:polygon(50% 0,100% 0,100% 100%,50% 100%);
+}
+
+#pack-opening.active .left{
+animation:ripLeft 1.5s forwards;
+}
+
+#pack-opening.active .right{
+animation:ripRight 1.5s forwards;
+}
+
+@keyframes ripLeft{
+to{
+transform:
+translateX(-500px)
+rotate(-25deg);
+opacity:0;
+}
+}
+
+@keyframes ripRight{
+to{
+transform:
+translateX(500px)
+rotate(25deg);
+opacity:0;
+}
+}
+
+/* CARD REVEAL */
+
+#player-card{
+position:absolute;
+opacity:0;
+transform:
+translateY(400px)
+rotateY(180deg);
+
+```
+transition:all 1.2s ease;
+z-index:100;
+```
+
+}
+
+.show-card{
+opacity:1 !important;
+
+```
+transform:
+    translateY(0)
+    rotateY(0deg) !important;
+```
+
+}
+
+#player-card img{
+width:350px;
+border-radius:20px;
+
+```
+box-shadow:
+0 0 60px #ff6600;
+```
+
 }
 
 /* TEXT */
 
 #opening-text{
-    position:relative;
-    z-index:30;
-    color:white;
-    font-size:4rem;
-    text-shadow:
-    0 0 20px #ff6600,
-    0 0 40px #ff6600;
-}
+margin-top:25px;
+color:white;
+font-size:2.5rem;
+text-shadow:
+0 0 20px #ff6600;
 }
 
-@keyframes pulseText{
-    from{
-        transform:scale(1);
-    }
-
-    to{
-        transform:scale(1.08);
-    }
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-    .pack-grid{
-        gap:30px;
-    }
-
-    .pack-image{
-        width:220px;
-    }
-
-    #opening-text{
-        font-size:2rem;
-    }
-
-    .opening-pack{
-        width:250px;
-    }
-}
-.pack-wrapper{
-    position:relative;
-    width:350px;
-    height:500px;
-    margin:0 auto 30px;
-}
-
-.pack-half{
-    position:absolute;
-    width:100%;
-    height:100%;
-    object-fit:contain;
-    top:0;
-    left:0;
-}
-
-.pack-half.left{
-    clip-path:polygon(0 0,50% 0,50% 100%,0 100%);
-}
-
-.pack-half.right{
-    clip-path:polygon(50% 0,100% 0,100% 100%,50% 100%);
-}
-
-#pack-opening.active .pack-half.left{
-    animation:ripLeft 1.5s forwards;
-}
-
-#pack-opening.active .pack-half.right{
-    animation:ripRight 1.5s forwards;
-}
-
-@keyframes ripLeft{
-    0%{transform:translateX(0);}
-    100%{
-        transform:
-        translateX(-250px)
-        rotate(-25deg)
-        scale(1.2);
-        opacity:0;
-    }
-}
-
-@keyframes ripRight{
-    0%{transform:translateX(0);}
-    100%{
-        transform:
-        translateX(250px)
-        rotate(25deg)
-        scale(1.2);
-        opacity:0;
-    }
-}
-
-.pack-flash{
-    position:absolute;
-    inset:0;
-    background:white;
-    opacity:0;
-}
-
-#pack-opening.active .pack-flash{
-    animation:megaFlash .8s forwards;
-}
-
-@keyframes megaFlash{
-    0%{opacity:0;}
-    20%{opacity:.9;}
-    100%{opacity:0;}
-}
-#enter-bio{
-    display:none;
-    padding:15px 35px;
-    font-size:20px;
-    font-weight:bold;
-    background:linear-gradient(45deg,#ff6600,#ff9900);
-    color:white;
-    border:none;
-    border-radius:12px;
-    cursor:pointer;
-    box-shadow:0 0 30px #ff6600;
-}
-
-#player-card{
-    position:absolute;
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%);
-    z-index:20;
-}
-
-#player-card-image{
-    width:350px;
-    max-width:80vw;
-}
-/* MUT PACK OPENER */
-
-#pack-opening{
-    position:fixed;
-    inset:0;
-    background:#000;
-    display:none;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    z-index:99999;
-    overflow:hidden;
-}
-
-#pack-opening.active{
-    display:flex;
-}
-
-.pack-wrapper{
-    position:relative;
-    width:350px;
-    height:500px;
-}
-
-.pack-half{
-    position:absolute;
-    width:350px;
-    top:0;
-    left:0;
-}
-
-.left{
-    clip-path:polygon(0 0,50% 0,50% 100%,0 100%);
-}
-
-.right{
-    clip-path:polygon(50% 0,100% 0,100% 100%,50% 100%);
-}
-
-#pack-opening.active .left{
-    animation:ripLeft 1.5s forwards;
-}
-
-#pack-opening.active .right{
-    animation:ripRight 1.5s forwards;
-}
-
-@keyframes ripLeft{
-    to{
-        transform:translateX(-250px) rotate(-20deg);
-        opacity:0;
-    }
-}
-
-@keyframes ripRight{
-    to{
-        transform:translateX(250px) rotate(20deg);
-        opacity:0;
-    }
-}
-
-.pack-flash{
-    position:absolute;
-    inset:0;
-    background:white;
-    opacity:0;
-}
-
-#pack-opening.active .pack-flash{
-    animation:flash .8s;
-}
-
-@keyframes flash{
-    0%{opacity:0;}
-    50%{opacity:1;}
-    100%{opacity:0;}
-}
-
-.smoke{
-    position:absolute;
-    width:500px;
-    height:500px;
-    border-radius:50%;
-    background:rgba(255,255,255,.1);
-    opacity:0;
-}
-
-#pack-opening.active .smoke{
-    animation:smokeRise 3s forwards;
-}
-
-@keyframes smokeRise{
-    from{
-        opacity:0;
-        transform:scale(.2);
-    }
-    to{
-        opacity:.5;
-        transform:scale(2);
-    }
-}
-
-#player-card{
-    opacity:0;
-    transform:translateY(400px) rotateY(180deg);
-    transition:all 1.2s ease;
-    position:absolute;
-    z-index:100;
-}
-
-.show-card{
-    opacity:1 !important;
-    transform:translateY(0) rotateY(0deg) !important;
-}
-
-#player-card img{
-    width:350px;
-    border-radius:20px;
-    box-shadow:0 0 60px orange;
-}
+/* BUTTON */
 
 #enter-bio{
-    display:block;
-    margin:20px auto;
-    padding:15px 35px;
-    background:#ff6600;
-    color:white;
-    border:none;
-    font-size:20px;
-    cursor:pointer;
-    border-radius:12px;
+display:none;
+margin:25px auto;
+
+```
+padding:15px 35px;
+
+background:#ff6600;
+
+color:white;
+
+border:none;
+
+border-radius:12px;
+
+font-size:20px;
+
+cursor:pointer;
+
+box-shadow:
+0 0 30px #ff6600;
+```
+
 }
 
-#opening-text{
-    color:white;
-    margin-top:25px;
-    font-size:2rem;
-    text-shadow:0 0 20px orange;
+#enter-bio:hover{
+transform:scale(1.05);
 }
