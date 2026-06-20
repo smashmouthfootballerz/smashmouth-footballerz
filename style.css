@@ -221,36 +221,18 @@ nav a:hover{
     margin:auto;
 }
 
-.ranking-card{
-
-    background:#111;
-
-    color:white;
-
-    text-decoration:none;
-
-    border-radius:15px;
-
-    height:140px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    font-weight:bold;
-
-    font-size:1.2rem;
-
-    transition:.3s;
+.ranking-card {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.ranking-card:hover{
-
-    border:2px solid #ff6600;
-
-    transform:translateY(-5px);
+.ranking-card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
 }
 
 /* VIDEOS */
