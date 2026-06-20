@@ -797,3 +797,18 @@ box-shadow:
 #enter-bio:hover{
 transform:scale(1.05);
 }
+.stadium-lights{
+    position:absolute;
+    inset:0;
+    background:
+    radial-gradient(circle,#ff6600 0%,transparent 70%);
+    opacity:0;
+    animation:lightsOn 1s forwards;
+    animation-delay:1s;
+}
+
+@keyframes lightsOn{
+    to{
+        opacity:.8;
+    }
+}
