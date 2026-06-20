@@ -807,3 +807,142 @@ footer{
     width:350px;
     max-width:80vw;
 }
+/* MUT PACK OPENER */
+
+#pack-opening{
+    position:fixed;
+    inset:0;
+    background:#000;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    z-index:99999;
+    overflow:hidden;
+}
+
+#pack-opening.active{
+    display:flex;
+}
+
+.pack-wrapper{
+    position:relative;
+    width:350px;
+    height:500px;
+}
+
+.pack-half{
+    position:absolute;
+    width:350px;
+    top:0;
+    left:0;
+}
+
+.left{
+    clip-path:polygon(0 0,50% 0,50% 100%,0 100%);
+}
+
+.right{
+    clip-path:polygon(50% 0,100% 0,100% 100%,50% 100%);
+}
+
+#pack-opening.active .left{
+    animation:ripLeft 1.5s forwards;
+}
+
+#pack-opening.active .right{
+    animation:ripRight 1.5s forwards;
+}
+
+@keyframes ripLeft{
+    to{
+        transform:translateX(-250px) rotate(-20deg);
+        opacity:0;
+    }
+}
+
+@keyframes ripRight{
+    to{
+        transform:translateX(250px) rotate(20deg);
+        opacity:0;
+    }
+}
+
+.pack-flash{
+    position:absolute;
+    inset:0;
+    background:white;
+    opacity:0;
+}
+
+#pack-opening.active .pack-flash{
+    animation:flash .8s;
+}
+
+@keyframes flash{
+    0%{opacity:0;}
+    50%{opacity:1;}
+    100%{opacity:0;}
+}
+
+.smoke{
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:rgba(255,255,255,.1);
+    opacity:0;
+}
+
+#pack-opening.active .smoke{
+    animation:smokeRise 3s forwards;
+}
+
+@keyframes smokeRise{
+    from{
+        opacity:0;
+        transform:scale(.2);
+    }
+    to{
+        opacity:.5;
+        transform:scale(2);
+    }
+}
+
+#player-card{
+    opacity:0;
+    transform:translateY(400px) rotateY(180deg);
+    transition:all 1.2s ease;
+    position:absolute;
+    z-index:100;
+}
+
+.show-card{
+    opacity:1 !important;
+    transform:translateY(0) rotateY(0deg) !important;
+}
+
+#player-card img{
+    width:350px;
+    border-radius:20px;
+    box-shadow:0 0 60px orange;
+}
+
+#enter-bio{
+    display:block;
+    margin:20px auto;
+    padding:15px 35px;
+    background:#ff6600;
+    color:white;
+    border:none;
+    font-size:20px;
+    cursor:pointer;
+    border-radius:12px;
+}
+
+#opening-text{
+    color:white;
+    margin-top:25px;
+    font-size:2rem;
+    text-shadow:0 0 20px orange;
+}
