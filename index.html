@@ -164,7 +164,8 @@ document.querySelectorAll('.open-pack').forEach(pack => {
     pack.addEventListener('click', function(e){
 
         e.preventDefault();
-
+        alert("PACK CLICKED");
+        
         const destination = this.href;
         const image = this.querySelector('.pack-image');
         const overlay = document.getElementById('pack-opening');
@@ -223,8 +224,6 @@ document.querySelectorAll('.open-pack').forEach(pack => {
     });
 
 });
-
-</script>
 
 </script>
 
