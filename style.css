@@ -30,7 +30,11 @@ body{
 
     padding:18px 50px;
 
-    background:transparent;
+    background:linear-gradient(
+        to bottom,
+        rgba(0,0,0,.85),
+        rgba(0,0,0,0)
+    );
 }
 
 .logo-brand{
