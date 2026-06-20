@@ -374,11 +374,17 @@ footer{
 /* PACK IMAGES */
 
 .pack-image{
-    width:240px;
+    width:250px;
     height:auto;
     border-radius:20px;
     cursor:pointer;
     transition:.3s ease;
+
+    backdrop-filter:blur(8px);
+
+    box-shadow:
+        0 0 25px rgba(0,0,0,.8),
+        0 0 40px rgba(255,102,0,.4);
 }
 
 /* JOE PACK */
