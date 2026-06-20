@@ -110,11 +110,12 @@ nav a:hover{
             rgba(0,0,0,.75),
             rgba(0,0,0,.75)
         ),
-        url('football-field.jpg');
+        url('new-hero.jpg');
 
     background-size:cover;
     background-position:center;
-}}
+    background-repeat:no-repeat;
+}
 
 .hosts-section h2{
 
