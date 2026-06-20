@@ -683,11 +683,13 @@ opacity:0;
 }
 
 @keyframes ripRight{
-to{
-transform:
-translateX(500px)
-rotate(25deg);
-opacity:0;
+    to{
+        transform:
+            translateX(500px)
+            rotate(25deg);
+
+        opacity:0;
+    }
 }
 
 /* CARD REVEAL */
