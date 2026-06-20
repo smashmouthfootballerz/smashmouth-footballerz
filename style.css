@@ -181,7 +181,8 @@ nav a:hover{
 /* RANKINGS */
 
 .rankings-section{
-    padding:80px 60px;
+    padding: 100px 20px;
+    min-height: 600px;
 
     background-image:
         linear-gradient(
@@ -191,7 +192,7 @@ nav a:hover{
         url('fantasyrankings.jpg');
 
     background-size:cover;
-    background-position:center;
+    background-position: top center;
     background-repeat:no-repeat;
 
     position:relative;
