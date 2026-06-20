@@ -689,12 +689,8 @@ translateX(500px)
 rotate(25deg);
 opacity:0;
 }
-}
 
 /* CARD REVEAL */
-
-/* CARD REVEAL */
-
 #player-card{
     position:absolute;
     z-index:100;
