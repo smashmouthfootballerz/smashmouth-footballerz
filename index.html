@@ -219,9 +219,13 @@ document.querySelectorAll('.open-pack').forEach(pack => {
 
 setTimeout(() => {
 
+    document.getElementById('player-card').style.opacity = '1';
+    document.getElementById('player-card').style.transform =
+        'translateY(0) rotateY(0deg)';
+
     document.getElementById('enter-bio').style.display = 'block';
 
-}, 5500);
+}, 3000);
 
 document.getElementById('enter-bio').onclick = () => {
     window.location.href = destination;
