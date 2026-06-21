@@ -1126,3 +1126,37 @@ background-position:center;
         drop-shadow(0 0 30px #ff6600)
         drop-shadow(0 0 50px #ff6600);
 }
+/* Stadium Lights Behind Tier Banners */
+
+.tier-banner-wrap{
+    position:relative;
+    text-align:center;
+    padding:80px 0;
+    overflow:hidden;
+}
+
+.tier-banner-wrap::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background-image:url("images/stadium-lights.png");
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:contain;
+
+    opacity:.35;
+    z-index:1;
+}
+
+.tier-banner{
+    position:relative;
+    z-index:2;
+    width:900px;
+    max-width:95%;
+
+    filter:
+        drop-shadow(0 0 15px #ff6600)
+        drop-shadow(0 0 30px #ff6600)
+        drop-shadow(0 0 50px #ff6600);
+}
