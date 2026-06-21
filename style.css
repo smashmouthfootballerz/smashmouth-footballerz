@@ -1010,3 +1010,21 @@ url('football-field.png');
 background-size:cover;
 background-position:center;
 }
+.projection-title{
+    text-align:center;
+    font-size:4rem;
+    color:#ff6600;
+    text-transform:uppercase;
+    margin-bottom:10px;
+
+    text-shadow:
+        0 0 15px rgba(255,102,0,.8);
+}
+
+.projection-subtitle{
+    text-align:center;
+    color:#bbb;
+    font-size:1.3rem;
+    margin-bottom:40px;
+    letter-spacing:2px;
+}
