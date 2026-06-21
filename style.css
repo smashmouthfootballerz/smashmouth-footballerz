@@ -1192,3 +1192,12 @@ background-position:center;
     max-height:85vh;
     object-fit:contain;
 }
+/* Mobile Fix */
+@media (max-width: 768px) {
+
+    .left-panel,
+    .right-panel {
+        display: none;
+    }
+
+}
