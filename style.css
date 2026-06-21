@@ -1192,14 +1192,11 @@ background-position:center;
     max-height:85vh;
     object-fit:contain;
 }
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
 
     .left-panel,
     .right-panel {
-        width: 50px;
-        top: 80px;
-        opacity: .35;
-        z-index: 1;
+        display: none;
     }
 
 }
