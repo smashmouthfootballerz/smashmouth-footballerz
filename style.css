@@ -1028,3 +1028,13 @@ background-position:center;
     margin-bottom:40px;
     letter-spacing:2px;
 }
+.tier-banner{
+    width:100%;
+    max-width:1400px;
+    display:block;
+    margin:60px auto 25px auto;
+}
+
+.table-wrapper{
+    margin-bottom:50px;
+}
