@@ -1098,7 +1098,9 @@ background-position:center;
     overflow:hidden;
 }
 
-.tier-banner-wrap::before{
+.tier-banner-wrap{
+    background:red;
+}
     content:"";
     position:absolute;
     top:0;
