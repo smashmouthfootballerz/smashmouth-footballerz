@@ -1119,13 +1119,14 @@ background-position:center;
     width:900px;
     max-width:95%;
 }
-/* Stadium Lights Behind Tier Banners */
+/* STADIUM LIGHTS BEHIND TIER BANNERS */
 
 .tier-banner-wrap{
     position:relative;
     text-align:center;
-    padding:80px 0;
+    padding:140px 0;
     overflow:hidden;
+    margin-bottom:30px;
 }
 
 .tier-banner-wrap::before{
@@ -1133,23 +1134,22 @@ background-position:center;
     position:absolute;
     inset:0;
 
-    background-image:url("images/stadium-lights.png");
-    background-position:center;
-    background-repeat:no-repeat;
-    background-size:contain;
+    background:url("stadium-lights.png") center center no-repeat;
+    background-size:cover;
 
-    opacity:.35;
+    opacity:.9;
     z-index:1;
 }
 
 .tier-banner{
     position:relative;
     z-index:2;
+
     width:900px;
     max-width:95%;
 
     filter:
-        drop-shadow(0 0 15px #ff6600)
-        drop-shadow(0 0 30px #ff6600)
-        drop-shadow(0 0 50px #ff6600);
+        drop-shadow(0 0 20px #ff6600)
+        drop-shadow(0 0 40px #ff6600)
+        drop-shadow(0 0 70px #ff6600);
 }
