@@ -1,77 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QB Rankings - SmashMouth Footballerz</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap" rel="stylesheet">
-<section class="rankings-hero">
-    <h1>SMF QB Rankings</h1
-    <p>Fantasy Football Without The Fluff</p>
-</section>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMF Projections 2026 - QB Tiers</title>
+  <style>
+    :root {
+      --smf-orange: #FF6200;
+      --smf-dark: #0F0F0F;
+      --smf-gray: #1C1C1C;
+    }
 
+    body {
+      background: #0A0A0A;
+      color: #fff;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.4;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .main-header {
+      text-align: center;
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      padding: 30px;
+      border-radius: 12px;
+      margin-bottom: 40px;
+      border: 3px solid var(--smf-orange);
+    }
+
+    .tier {
+      margin-bottom: 60px;
+      background: var(--smf-gray);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
+
+    .tier-banner {
+      padding: 20px;
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+    }
+
+    .tier1 .tier-banner { background: linear-gradient(90deg, #FF6200, #FF8C00); color: #000; }
+    .tier2 .tier-banner { background: linear-gradient(90deg, #FF6200, #FF8C00); color: #000; }
+    .tier3 .tier-banner { background: linear-gradient(90deg, #8B00FF, #C300FF); }
+    .tier4 .tier-banner { background: linear-gradient(90deg, #0066FF, #00A3FF); }
+    .tier5 .tier-banner { background: linear-gradient(90deg, #00CC00, #66FF66); color: #000; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #111;
+    }
+
+    th, td {
+      padding: 12px 10px;
+      text-align: center;
+      border-bottom: 1px solid #333;
+    }
+
+    th {
+      background: #1f1f1f;
+      color: var(--smf-orange);
+      font-weight: bold;
+    }
+
+    tr:hover {
+      background: #1a1a1a;
+    }
+
+    .player-name {
+      text-align: left;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-
-  <body>
-
-<section class="rankings-hero">
-
-    <img src="Subject.png" alt="SMF Logo" class="rankings-logo">
-
-    <h1>SMF Quarterback Rankings</h1>
-
-    <p>Fantasy Football Without The Fluff</p>
-
-</section>
-
-<section class="qb-rankings-container">
-
-    <div class="tier-header">
-        TIER 1 - ELITE LEAGUE WINNERS
+  <div class="container">
+    <div class="main-header">
+      <h1 style="margin:0; font-size:2.8rem;">SMF PROJECTIONS 2026</h1>
+      <p style="margin:10px 0 0 0; font-size:1.4rem; opacity:0.9;">Quarterback Fantasy Projections</p>
     </div>
 
-    <table class="qb-table">
+    <!-- Tier 1 -->
+    <div class="tier tier1">
+      <div class="tier-banner">TIER 1 — ELITE LEAGUE WINNERS</div>
+      <table>
+        <tr><th>PLAYER</th><th>ATT</th><th>CMP</th><th>YDS</th><th>TDS</th><th>INTS</th><th>R_ATT</th><th>R_YDS</th><th>R_TDS</th><th>FL</th><th>FPTS</th></tr>
+        <tr><td class="player-name">Josh Allen BUF</td><td>491.7</td><td>333.4</td><td>3814.5</td><td>27.4</td><td>11.2</td><td>118.1</td><td>585.2</td><td>11.8</td><td>4.1</td><td>372.2</td></tr>
+        <!-- Add remaining rows for Tier 1 -->
+      </table>
+    </div>
 
-        <thead>
-            <tr>
-                <th>RK</th>
-                <th>PLAYER</th>
-                <th>TEAM</th>
-                <th>SMF GRADE</th>
-            </tr>
-        </thead>
+    <!-- Repeat similar blocks for Tier 2, 3, 4, 5 -->
 
-        <tbody>
-
-            <tr>
-                <td>1</td>
-                <td>Josh Allen</td>
-                <td>BUF</td>
-                <td>100</td>
-            </tr>
-
-            <tr>
-                <td>2</td>
-                <td>Lamar Jackson</td>
-                <td>BAL</td>
-                <td>99</td>
-            </tr>
-
-            <tr>
-                <td>3</td>
-                <td>Jayden Daniels</td>
-                <td>WAS</td>
-                <td>98</td>
-            </tr>
-
-        </tbody>
-
-    </table>
-
-</section>
-
-</body>
+  </div>
 </body>
 </html>
