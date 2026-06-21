@@ -1187,3 +1187,8 @@ background-position:center;
     max-width:1400px;
     margin:auto;
 }
+.right-panel img{
+    width:100%;
+    max-height:85vh;
+    object-fit:contain;
+}
