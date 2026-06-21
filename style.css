@@ -1089,3 +1089,7 @@ background-position:center;
     transform:translateX(-50%);
     text-align:center;
 }
+.tier-banner-wrap{
+    background:url("stadium-lights.png") center center no-repeat;
+    background-size:800px;
+}
