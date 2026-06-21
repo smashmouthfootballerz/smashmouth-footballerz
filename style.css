@@ -1088,8 +1088,41 @@ background-position:center;
     left:50%;
     transform:translateX(-50%);
     text-align:center;
-}
+/* TIER BANNER WITH STADIUM LIGHTS */
+
 .tier-banner-wrap{
+    position:relative;
+    width:100%;
+    padding:80px 0;
+    text-align:center;
+    overflow:hidden;
+}
+
+.tier-banner-wrap::before{
+    content:"";
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:1400px;
+    height:700px;
+
+    transform:translate(-50%,-50%);
+
     background:url("stadium-lights.png") center center no-repeat;
-    background-size:800px;
+    background-size:contain;
+
+    opacity:.45;
+    z-index:1;
+}
+
+.tier-banner{
+    position:relative;
+    z-index:2;
+    width:900px;
+    max-width:95%;
+
+    filter:
+        drop-shadow(0 0 15px #ff6600)
+        drop-shadow(0 0 30px #ff6600)
+        drop-shadow(0 0 50px #ff6600);
 }
