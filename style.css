@@ -1038,3 +1038,28 @@ background-position:center;
 .table-wrapper{
     margin-bottom:50px;
 }
+.tier-section{
+    position:relative;
+    text-align:center;
+    padding:80px 0;
+}
+
+.tier-section::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:url("stadium-lights.png") center center/cover no-repeat;
+
+    opacity:.35;
+    filter:brightness(1.4);
+
+    z-index:0;
+}
+
+.tier-banner{
+    position:relative;
+    z-index:2;
+    width:950px;
+    max-width:95%;
+}
