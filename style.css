@@ -1041,19 +1041,20 @@ background-position:center;
 .tier-section{
     position:relative;
     text-align:center;
-    padding:80px 0;
+    padding:50px 0;
 }
 
 .tier-section::before{
     content:"";
     position:absolute;
-    inset:0;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
 
     background:url("stadium-lights.png") center center/cover no-repeat;
 
     opacity:.35;
-    filter:brightness(1.4);
-
     z-index:0;
 }
 
@@ -1062,4 +1063,5 @@ background-position:center;
     z-index:2;
     width:950px;
     max-width:95%;
+}
 }
