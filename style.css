@@ -1207,3 +1207,68 @@ background-position:center;
     }
 
 }
+/* MOBILE HERO FIX */
+
+@media screen and (max-width:768px){
+
+    .navbar{
+        padding:10px 15px;
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .logo-brand{
+        flex-direction:column;
+        gap:5px;
+    }
+
+    .logo-brand img{
+        width:40px;
+    }
+
+    .logo-brand span{
+        font-size:1.1rem;
+        text-align:center;
+    }
+
+    nav{
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    nav a{
+        font-size:.9rem;
+    }
+
+    .hero-content{
+        top:60%;
+        padding:0 20px;
+    }
+
+    .hero-content h1{
+        font-size:2rem !important;
+        line-height:1.1;
+        margin-bottom:10px;
+    }
+
+    .hero-content p{
+        font-size:1rem !important;
+        margin-bottom:15px;
+    }
+
+    .hero-btn,
+    .shop-btn{
+        display:block;
+        width:90%;
+        max-width:320px;
+        margin:10px auto;
+        font-size:1rem;
+    }
+
+    .hero-banner{
+        min-height:700px;
+        object-fit:cover;
+        object-position:center;
+    }
+}
