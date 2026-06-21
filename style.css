@@ -874,24 +874,10 @@ transform:scale(1.05);
 
 /* QB PAGE */
 
-.qb-hero{
-    height: 600px;
-
-    background:
-    linear-gradient(
-        rgba(0,0,0,.70),
-        rgba(0,0,0,.85)
-    ),
-    url("new-hero.jpg");
-
-    background-size: contain;
-    background-position: center top;
-    background-repeat: no-repeat;
-
-    display:flex;
-    justify-content:center;
-    align-items:flex-start;
-    text-align:center;
+.qb-banner{
+    width:100%;
+    height:auto;
+    display:block;
 }
 
 .hero-logo{
