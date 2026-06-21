@@ -9,7 +9,13 @@ html{
 }
 
 body{
-    background:#000;
+    background:
+        url('side-panel.png') left top repeat-y,
+        url('side-panel.png') right top repeat-y,
+        #000;
+
+    background-size:220px auto, 220px auto;
+
     color:white;
     font-family:Arial, Helvetica, sans-serif;
     overflow-x:hidden;
@@ -897,6 +903,7 @@ max-width:1200px;
 margin:auto;
 padding:80px 30px;
 text-align:center;
+width:calc(100% - 500px);
 }
 
 .intro h2{
@@ -944,6 +951,7 @@ margin-bottom:15px;
 max-width:1500px;
 margin:auto;
 padding:80px 20px;
+width:calc(100% - 500px);
 }
 
 .rankings h2{
@@ -1154,30 +1162,4 @@ background-position:center;
         drop-shadow(0 0 20px #ff6600)
         drop-shadow(0 0 40px #ff6600)
         drop-shadow(0 0 70px #ff6600);
-}
-.page-layout{
-    display:flex;
-    gap:20px;
-    width:98%;
-    max-width:1900px;
-    margin:auto;
-    align-items:flex-start;
-}
-
-.main-content{
-    flex:1;
-}
-
-.left-panel,
-.right-panel{
-    width:250px;
-    position:sticky;
-    top:100px;
-}
-
-.left-panel img,
-.right-panel img{
-    width:100%;
-    border-radius:15px;
-    display:block;
 }
