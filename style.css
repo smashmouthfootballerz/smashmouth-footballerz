@@ -1192,11 +1192,13 @@ background-position:center;
     max-height:85vh;
     object-fit:contain;
 }
-@media (max-width: 1200px) {
+@media screen and (max-width: 768px){
 
     .left-panel,
-    .right-panel {
-        display: none;
+    .right-panel,
+    .floating-panel,
+    .side-panel{
+        display:none !important;
     }
 
 }
