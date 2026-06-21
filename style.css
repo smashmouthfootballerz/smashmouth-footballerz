@@ -875,33 +875,18 @@ transform:scale(1.05);
 /* QB PAGE */
 
 .qb-hero{
-    position: relative;
-    height: 750px;
-    background: url("new-hero.jpg");
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-    overflow: hidden;
-}
+height:70vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
 
-.hero-overlay{
-    position: absolute;
-    left: 50%;
-    bottom: 60px;      /* pushes text toward bottom */
-    transform: translateX(-50%);
-    width: 90%;
-    text-align: center;
-    z-index: 2;
-}
+background:
+linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
+url('stadium-lights.png');
 
-.hero-overlay h1{
-    font-size:5rem;
-    margin-bottom:15px;
-}
-
-.hero-overlay p{
-    font-size:1.8rem;
-    margin-bottom:20px;
+background-size:cover;
+background-position:center;
 }
 
 .hero-logo{
