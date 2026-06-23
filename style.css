@@ -1155,40 +1155,17 @@ background-position:center;
 }
 /* FLOATING SIDE PANELS */
 
-.left-panel{
-    position:fixed;
-    left:15px;
-    top:120px;
-    width:180px;
-    z-index:999;
+.side-panel {
+    position: fixed;
+    right: 15px;
+    top: 120px;
+    width: 140px;   /* make smaller */
+    z-index: 100;
 }
 
-.right-panel{
-    position:fixed;
-    right:15px;
-    top:120px;
-    width:180px;
-    z-index:999;
-}
-
-.left-panel img,
-.right-panel img{
-    width:100%;
-    display:block;
-    border-radius:15px;
-
-    box-shadow:
-        0 0 20px rgba(255,102,0,.4);
-}
-
-.main-content{
-    max-width:1400px;
-    margin:auto;
-}
-.right-panel img{
-    width:100%;
-    max-height:85vh;
-    object-fit:contain;
+.side-panel img {
+    width: 100%;
+    height: auto;
 }
 @media screen and (max-width: 768px){
 
