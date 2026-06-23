@@ -1102,7 +1102,7 @@ background-position:center;
 }
 
 .tier-banner-wrap{
-    background:orange;
+    background:red;
 }
     content:"";
     position:absolute;
@@ -1142,15 +1142,15 @@ background-position:center;
     margin-bottom:0;
 }
 .tier-banner{
-    position:relative;
-    z-index:2;
-
-    width:700px;     /* was 900px */
+    width:500px;      /* smaller */
     max-width:80%;
+    display:block;
+    margin:0 auto;
 
     filter:
-        drop-shadow(0 0 15px #ff6600)
-        drop-shadow(0 0 30px #ff6600);
+        drop-shadow(0 0 10px #ff6600)
+        drop-shadow(0 0 20px #ff6600);
+}
 }
 /* FLOATING SIDE PANELS */
 
