@@ -1309,3 +1309,43 @@ background-position:center;
     font-size:1.2rem;
     letter-spacing:2px;
 }
+.articles-section{
+    padding:80px 5%;
+    background:#0a0a0a;
+    text-align:center;
+}
+
+.articles-section h2{
+    color:#ff6600;
+    font-size:3rem;
+    margin-bottom:40px;
+}
+
+.article-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.article-card{
+    background:#111;
+    border:2px solid #ff6600;
+    border-radius:15px;
+    padding:25px;
+}
+
+.article-card h3{
+    color:#fff;
+    margin-bottom:15px;
+}
+
+.article-card p{
+    color:#ccc;
+    margin-bottom:20px;
+}
+
+.article-card a{
+    color:#ff6600;
+    text-decoration:none;
+    font-weight:bold;
+}
