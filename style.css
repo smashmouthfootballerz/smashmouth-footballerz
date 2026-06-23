@@ -1155,27 +1155,21 @@ background-position:center;
 }
 /* FLOATING SIDE PANELS */
 
-.side-panel {
-    position: fixed;
-    right: 15px;
-    top: 120px;
-    width: 140px;   /* make smaller */
-    z-index: 100;
+.right-panel,
+.left-panel,
+.floating-panel,
+.side-panel{
+    width:90px !important;
+    max-width:90px !important;
 }
 
-.side-panel img {
-    width: 100%;
-    height: auto;
-}
-@media screen and (max-width: 768px){
-
-    .left-panel,
-    .right-panel,
-    .floating-panel,
-    .side-panel{
-        display:none !important;
-    }
-
+.right-panel img,
+.left-panel img,
+.floating-panel img,
+.side-panel img{
+    width:90px !important;
+    max-width:90px !important;
+    height:auto !important;
 }
 /* MOBILE HERO FIX */
 
