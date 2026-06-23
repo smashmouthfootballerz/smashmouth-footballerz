@@ -1125,11 +1125,8 @@ background-position:center;
 /* STADIUM LIGHTS BEHIND TIER BANNERS */
 
 .tier-banner-wrap{
-    position:relative;
-    text-align:center;
-    padding:140px 0;
-    overflow:hidden;
-    margin-bottom:30px;
+    padding:40px 0 10px 0;
+    margin-bottom:0;
 }
 
 .tier-banner-wrap{
@@ -1146,13 +1143,12 @@ background-position:center;
     position:relative;
     z-index:2;
 
-    width:900px;
-    max-width:95%;
+    width:700px;     /* was 900px */
+    max-width:80%;
 
     filter:
-        drop-shadow(0 0 20px #ff6600)
-        drop-shadow(0 0 40px #ff6600)
-        drop-shadow(0 0 70px #ff6600);
+        drop-shadow(0 0 15px #ff6600)
+        drop-shadow(0 0 30px #ff6600);
 }
 /* FLOATING SIDE PANELS */
 
