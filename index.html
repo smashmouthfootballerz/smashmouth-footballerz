@@ -266,6 +266,13 @@ document.querySelectorAll('.open-pack').forEach(pack => {
 </script>
 
 <audio id="shakeSound" src="shake.mp3"></audio> <audio id="ripSound" src="rip.mp3"></audio> <audio id="boomSound" src="boom.mp3"></audio> <audio id="crowdSound" src="crowd.mp3"></audio>
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
 
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+</script>
 </body>
 </html>
