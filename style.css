@@ -874,24 +874,6 @@ transform:scale(1.05);
 
 /* QB PAGE */
 
-.qb-hero{
-    height:750px;
-    background-image:url("smf-qb-banner.png");
-    background-size:contain;
-    background-position:center top;
-    background-repeat:no-repeat;
-    background-color:#000;
-}
-
-.hero-overlay{
-    position:absolute;
-    bottom:35px;
-    left:50%;
-    transform:translateX(-50%);
-    text-align:center;
-    width:90%;
-}
-
 .intro{
 max-width:1200px;
 margin:auto;
