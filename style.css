@@ -1390,7 +1390,7 @@ background-position:center;
     width:280px;
     max-width:70%;
 
-    margin:0 auto -40px;  /* pulls table way up */
+    margin:0 auto 20px;   /* changed from -40px */
 
     position:relative;
     z-index:5;
@@ -1410,9 +1410,9 @@ background-position:center;
         white-space:nowrap;
     }
 
-    .tier-banner{
+   .tier-banner{
     width:300px;
-    margin:0 auto -25px;
+    margin:0 auto 15px;
 }
 /* Red tier section background */
 
@@ -1423,8 +1423,8 @@ background-position:center;
 #tier5,
 #tier6,
 #tier7{
-    margin:20px auto;
-    padding:10px 25px 25px;
+    padding-top:30px;
+}
 
     border-radius:30px;
 
