@@ -1386,12 +1386,9 @@ background-position:center;
 
 .tier-banner{
     display:block;
-
     width:280px;
     max-width:70%;
-
-    margin:0 auto 20px;   /* changed from -40px */
-
+    margin:0 auto 20px;
     position:relative;
     z-index:5;
 
@@ -1410,11 +1407,13 @@ background-position:center;
         white-space:nowrap;
     }
 
-   .tier-banner{
-    width:300px;
-    margin:0 auto 15px;
+    .tier-banner{
+        width:300px;
+        margin:0 auto 15px;
+    }
 }
-/* Red tier section background */
+
+/* Tier spacing */
 
 #tier1,
 #tier2,
@@ -1423,16 +1422,5 @@ background-position:center;
 #tier5,
 #tier6,
 #tier7{
-    padding-top:30px;
-}
-
-    border-radius:30px;
-
-    background:
-        radial-gradient(
-            ellipse at center,
-            rgba(120,0,0,.22) 0%,
-            rgba(70,0,0,.12) 50%,
-            rgba(0,0,0,0) 100%
-        );
+    padding-top:40px;
 }
