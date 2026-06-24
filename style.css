@@ -1352,9 +1352,11 @@ background-position:center;
 .rankings-table{
     width:100%;
     border-collapse:collapse;
-    margin:20px auto 60px;
+
+    margin:0 auto 40px;   /* remove gap above table */
+
     background:#0f0f0f;
-    border:1px solid rgba(255,255,255,.15);
+
     border-radius:20px;
     overflow:hidden;
 }
@@ -1392,13 +1394,15 @@ background-position:center;
 
 .tier-banner{
     display:block;
-    width:500px;
-    max-width:90%;
-    margin:70px auto 25px;
+
+    width:340px;      /* smaller banner */
+    max-width:75%;
+
+    margin:10px auto -10px;  /* pulls table up */
 
     filter:
         drop-shadow(0 0 10px #ff6600)
-        drop-shadow(0 0 25px #ff6600);
+        drop-shadow(0 0 20px #ff6600);
 }
 
 /* Mobile */
