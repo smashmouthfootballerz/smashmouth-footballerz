@@ -1350,15 +1350,7 @@ background-position:center;
 }
 
 .rankings-table{
-    width:100%;
-    border-collapse:collapse;
-
-    margin:0 auto 40px;   /* remove gap above table */
-
-    background:#0f0f0f;
-
-    border-radius:20px;
-    overflow:hidden;
+    margin:0 auto 30px;
 }
 
 .rankings-table th{
@@ -1395,14 +1387,17 @@ background-position:center;
 .tier-banner{
     display:block;
 
-    width:340px;      /* smaller banner */
-    max-width:75%;
+    width:280px;
+    max-width:70%;
 
-    margin:10px auto -10px;  /* pulls table up */
+    margin:0 auto -40px;  /* pulls table way up */
+
+    position:relative;
+    z-index:5;
 
     filter:
-        drop-shadow(0 0 10px #ff6600)
-        drop-shadow(0 0 20px #ff6600);
+        drop-shadow(0 0 8px #ff6600)
+        drop-shadow(0 0 15px #ff6600);
 }
 
 /* Mobile */
@@ -1416,8 +1411,8 @@ background-position:center;
     }
 
     .tier-banner{
-        width:300px;
-    }
+    width:300px;
+    margin:0 auto -25px;
 }
 /* Red tier section background */
 
@@ -1428,16 +1423,16 @@ background-position:center;
 #tier5,
 #tier6,
 #tier7{
-    position:relative;
-
-    margin:60px auto;
-    padding:40px 25px;
-
-    background:
-        radial-gradient(circle at center,
-        rgba(180,0,0,.35) 0%,
-        rgba(100,0,0,.25) 40%,
-        rgba(0,0,0,0) 85%);
+    margin:20px auto;
+    padding:10px 25px 25px;
 
     border-radius:30px;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(120,0,0,.22) 0%,
+            rgba(70,0,0,.12) 50%,
+            rgba(0,0,0,0) 100%
+        );
 }
